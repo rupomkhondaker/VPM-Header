@@ -1,9 +1,14 @@
   jQuery(document).ready(function(){
-    $(".dropdown").hover(
-      function() { $('.dropdown-menu', this).stop().fadeIn("fast");
-        },
-      function() { $('.dropdown-menu', this).stop().fadeOut("fast");
-    });
+		$(".dropdown").hover(            
+			function() {
+				$('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideDown("600");
+				$(this).toggleClass('open');        
+			},
+			function() {
+				$('.dropdown-menu', this).not('.in .dropdown-menu').stop(true,true).slideUp("300");
+				$(this).toggleClass('open');       
+			}
+		);
 	
 		var menuPos = $('.header-desktop-bottom').offset().top;
 		//var adminMenuHeight = $('#wpadminbar').height();
@@ -30,7 +35,7 @@
 		});
 		window.onload = function(e) {
 			  setTimeout(function(){ 
-					$("#VPMTicker").fadeIn('slow');
+					$("#VPMTicker").fadeIn('slow').show();
 			  }, 5000);
         };
 
