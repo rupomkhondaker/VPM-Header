@@ -104,13 +104,13 @@
 					{
 						params.modul.find(".bn-title h2").css({"display":"none"});
 						params.modul.find(".bn-title").css({"width":10});
-						params.modul.find("ul").css({"left":30});
+						// params.modul.find("ul").css({"left":30});
 					}
 					else
 					{
 						params.modul.find(".bn-title h2").css({"display":"inline-block"});
 						params.modul.find(".bn-title").css({"width":"auto"});
-						params.modul.find("ul").css({"left":$(params.modul).find(".bn-title").width()+30});
+						// params.modul.find("ul").css({"left":$(params.modul).find(".bn-title").width()+30});
 					}
 				}
 				
