@@ -62,8 +62,9 @@
         }
 
         .VPMlogo {
-            max-width: 300px;
-            display: inline-flex;
+            min-width: 300px;
+            width: 300px;
+            display: flex;
             vertical-align: middle;
             position: relative;
             top: 6px;
@@ -90,8 +91,8 @@
         }
 
         .fixed-header .VPMlogo {
-            min-width: calc(300px - 126px);
-
+            min-width: 126px;
+            width: 126px;
         }
 
         .header-desktop-top {
@@ -100,7 +101,7 @@
         }
 
         .VPMlogo .main-logo img {
-            width: 300px;
+            width: 100%;
         }
 
         .VPMlogo .sticky-logo img {
@@ -112,7 +113,7 @@
         .Search-Cart-Acoount {
             right: 15px;
             top: 15px;
-            display: inline-flex;
+            display: flex;
             flex-direction: row;
 
         }
@@ -169,7 +170,7 @@
         }
 
         .search-wrap {
-            margin: 15px 0 15px 10px;
+            margin: 15px 0 15px 0;
         }
 
         .vpm-cart-wrap {
@@ -268,10 +269,12 @@
             -webkit-transition: all ease 0.4s;
             -o-transition: all ease 0.4s;
         }
+
         .megamenu-collapse {
             width: 100%;
             display: inline-flex !important;
         }
+
         .megamenu ul {
             margin: 2px;
             padding: 5px;
@@ -320,7 +323,8 @@
                 <li>Offer item 2</li>
                 <li>Offer item 3</li>
                 <li>Offer item 4</li>
-                <ul class="vpm-menu-ul">
+            </ul>
+            <ul class="vpm-menu-ul"></ul>
         </div>
     </div>
     <div class="clearfix"></div>
@@ -340,60 +344,57 @@
                         <a href="#">Feature product</a>
                         <div class="megamenu">
                             <div class="container">
+                                <h4>Trending Product<span class="pull-right"><a href="#">View all</a></span></h4>
                                 <ul class="vpm-menu-ul">
+                                    <li>
+                                        <div class="col-sm-6 col-md-4">
+                                            <a href="#" class="thumbnail">
+                                                <img src="http://placehold.it/250x250"/>
+                                            </a>
 
-                                    <div class="container">
-                                        <h4>Trending Product<span class="pull-right"><a href="#">View all</a></span></h4>
-                                        <li>
-                                            <div class="col-sm-6 col-md-4">
-                                                <a href="#" class="thumbnail">
-                                                    <img src="http://placehold.it/250x250"/>
-                                                </a>
+                                        </div>
 
-                                            </div>
-
-                                            <div class="col-sm-6 col-md-2">
-                                                <a href="#" class="thumbnail">
-                                                    <img src="http://placehold.it/150x120"/>
-                                                </a>
-                                            </div>
-                                            <div class="col-sm-6 col-md-2">
-                                                <a href="#" class="thumbnail">
-                                                    <img src="http://placehold.it/150x120"/>
-                                                </a>
-                                            </div>
-                                            <div class="col-sm-6 col-md-2">
-                                                <a href="#" class="thumbnail">
-                                                    <img src="http://placehold.it/150x120"/>
-                                                </a>
-                                            </div>
-                                            <div class="col-sm-6 col-md-2">
-                                                <a href="#" class="thumbnail">
-                                                    <img src="http://placehold.it/150x120"/>
-                                                </a>
-                                            </div>
-                                            <div class="col-sm-6 col-md-2">
-                                                <a href="#" class="thumbnail">
-                                                    <img src="http://placehold.it/150x120"/>
-                                                </a>
-                                            </div>
-                                            <div class="col-sm-6 col-md-2">
-                                                <a href="#" class="thumbnail">
-                                                    <img src="http://placehold.it/150x120"/>
-                                                </a>
-                                            </div>
-                                            <div class="col-sm-6 col-md-2">
-                                                <a href="#" class="thumbnail">
-                                                    <img src="http://placehold.it/150x120"/>
-                                                </a>
-                                            </div>
-                                            <div class="col-sm-6 col-md-2">
-                                                <a href="#" class="thumbnail">
-                                                    <img src="http://placehold.it/150x120"/>
-                                                </a>
-                                            </div>
-                                        </li>
-                                    </div>
+                                        <div class="col-sm-6 col-md-2">
+                                            <a href="#" class="thumbnail">
+                                                <img src="http://placehold.it/150x120"/>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-6 col-md-2">
+                                            <a href="#" class="thumbnail">
+                                                <img src="http://placehold.it/150x120"/>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-6 col-md-2">
+                                            <a href="#" class="thumbnail">
+                                                <img src="http://placehold.it/150x120"/>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-6 col-md-2">
+                                            <a href="#" class="thumbnail">
+                                                <img src="http://placehold.it/150x120"/>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-6 col-md-2">
+                                            <a href="#" class="thumbnail">
+                                                <img src="http://placehold.it/150x120"/>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-6 col-md-2">
+                                            <a href="#" class="thumbnail">
+                                                <img src="http://placehold.it/150x120"/>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-6 col-md-2">
+                                            <a href="#" class="thumbnail">
+                                                <img src="http://placehold.it/150x120"/>
+                                            </a>
+                                        </div>
+                                        <div class="col-sm-6 col-md-2">
+                                            <a href="#" class="thumbnail">
+                                                <img src="http://placehold.it/150x120"/>
+                                            </a>
+                                        </div>
+                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -403,8 +404,8 @@
                         <div class="megamenu">
                             <div class="container">
                                 <div class="col-md-3 megamenu-column">
+                                    <h4>By Type</h4>
                                     <ul class="vpm-menu-ul">
-                                        <h4>By Type</h4>
                                         <li><a href="#">Home2</a></li>
                                         <li><a href="#">Page 2</a></li>
                                         <li><a href="#">Page 3</a></li>
@@ -414,8 +415,8 @@
                                     </ul>
                                 </div>
                                 <div class="col-md-3 megamenu-column">
+                                    <h4>By Use</h4>
                                     <ul class="vpm-menu-ul">
-                                        <h4>By Use</h4>
                                         <li><a href="#">Page 1</a></li>
                                         <li><a href="#">Page 2</a></li>
                                         <li><a href="#">Page 3</a></li>
@@ -425,8 +426,8 @@
                                     </ul>
                                 </div>
                                 <div class="col-md-3 megamenu-column">
+                                    <h4>By Brand</h4>
                                     <ul class="vpm-menu-ul">
-                                        <h4>By Brand</h4>
                                         <li><a href="#">Page 1</a></li>
                                         <li><a href="#">Page 2</a></li>
                                         <li><a href="#">Page 3</a></li>
@@ -436,8 +437,8 @@
                                     </ul>
                                 </div>
                                 <div class="col-md-3 megamenu-column">
+                                    <h4>Feature Brand</h4>
                                     <ul class="vpm-menu-ul">
-                                        <h4>Feature Brand</h4>
                                         <li><a class="has-image" href="#"><img src="http://placehold.it/200x40"></a></li>
                                         <li><a class="has-image" href="#"><img src="http://placehold.it/200x40"></a></li>
                                         <li><a class="has-image" href="#"><img src="http://placehold.it/200x40"></a></li>
@@ -446,8 +447,8 @@
                                     </ul>
                                 </div>
                                 <div class="col-md-12 megamenu-column">
+                                    <h4>Feature Brand</h4>
                                     <ul class="vpm-menu-ul">
-                                        <h4>Feature Brand</h4>
                                         <li>There is no CSS property background-opacity, but you can fake it by inserting a pseudo element with regular opacity the exact size of the element behind it.</li>
                                     </ul>
                                 </div>
@@ -459,8 +460,8 @@
                         <div class="megamenu">
                             <div class="container megamenu-background">
                                 <div class="col-md-3 megamenu-column">
+                                    <h4>By Type</h4>
                                     <ul class="vpm-menu-ul">
-                                        <h4>By Type</h4>
                                         <li><a href="#">home3</a></li>
                                         <li><a href="#">Page 2</a></li>
                                         <li><a href="#">Page 3</a></li>
@@ -469,8 +470,8 @@
                                     </ul>
                                 </div>
                                 <div class="col-md-3 megamenu-column">
+                                    <h4>By Use</h4>
                                     <ul class="vpm-menu-ul">
-                                        <h4>By Use</h4>
                                         <li><a href="#">Page 1</a></li>
                                         <li><a href="#">Page 2</a></li>
                                         <li><a href="#">Page 3</a></li>
@@ -479,8 +480,8 @@
                                     </ul>
                                 </div>
                                 <div class="col-md-3 megamenu-column">
+                                    <h4>By Brand</h4>
                                     <ul class="vpm-menu-ul">
-                                        <h4>By Brand</h4>
                                         <li><a href="#">Page 1</a></li>
                                         <li><a href="#">Page 2</a></li>
                                         <li><a href="#">Page 3</a></li>
@@ -489,8 +490,8 @@
                                     </ul>
                                 </div>
                                 <div class="col-md-3 megamenu-column">
+                                    <h4>By Brand</h4>
                                     <ul class="vpm-menu-ul">
-                                        <h4>By Brand</h4>
                                         <li><a href="#">Page 1</a></li>
                                         <li><a href="#">Page 2</a></li>
                                         <li><a href="#">Page 3</a></li>
@@ -512,7 +513,6 @@
                             <li><a href="#">Separated link</a></li>
                         </ul>
                     </li>
-
                 </ul>
             </div>
             <div class="Search-Cart-Acoount pull-right">
@@ -548,8 +548,6 @@
 
 </div>
 <!-- Mobile Header Area End-->
-
-</div>
 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
