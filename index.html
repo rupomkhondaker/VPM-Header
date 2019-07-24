@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,514 +12,551 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 
 
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-	<style>
-	body{
-		min-height:1100px;
-	}
-	ul{
-		list-style-type:none;
-		margin: 0;
-        padding: 0;
-	}
-	.no-padding{
-		padding-right: 0px;
-		padding-left: 0px;
-	}
-	.Ticker{
-		display: flex;
-		text-align: center;
-		justify-content: center;
-		padding: 15px;
-		overflow: hidden;
-	}
-	.header-desktop-bottom {
-		display: flex;
-		flex-wrap: nowrap;
-		position: relative;
-		margin: 0;
-		left: 0;
-		right: 0;
-		box-shadow: 0 0 1px 0 #bababa;
-		-webkit-transition: all linear 0.4s;
-		-moz-transition: all linear 0.4s;
-		transition: all linear 0.4s;
-	}
-	.header-desktop-bottom.fixed-header{
-		-webkit-transition: all linear 0.4s;
-		-moz-transition: all linear 0.4s;
-		transition: all linear 0.4s;
-	}
-	.VPMlogo{
-		min-width:300px;
-		display: block;
-		vertical-align: middle;
-		position: relative;
-		top: 6px;
-	}
-	.VPMMainMenu{
-		width: 100%;
-		display: flex;
-		flex-flow: nowrap;
-		justify-content: center;
-		align-items: center;
-	}
-	.fixed-header {
-		position: fixed;
-		top: 0;
-		left: 0;
-		width: 100%;
-	}
-	.fixed-header .VPMMainMenu{
-		width: 100%;
+    <style>
+        body {
+            min-height: 1100px;
+        }
 
-	}
-	.fixed-header .VPMlogo{
-		min-width:calc(300px - 126px);
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
 
-	}
-	.header-desktop-top {
-		background: #337ab7;
-		color: #fff;
-	}
+        .no-padding {
+            padding-right: 0px;
+            padding-left: 0px;
+        }
 
-	.VPMlogo .main-logo img {
-		width: 300px;
-	}
-	.VPMlogo .sticky-logo img {
-		width: 126px;
-		top: 7px;
-		position: absolute;
-	}
+        .Ticker {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            padding: 15px;
+            overflow: hidden;
+        }
 
-	.Search-Cart-Acoount {
-		right: 15px;
-		top: 15px;
-		display: flex;
-		flex-direction: row;
+        .header-desktop-bottom {
+            display: flex;
+            flex-wrap: nowrap;
+            position: relative;
+            margin: 0;
+            left: 0;
+            right: 0;
+            box-shadow: 0 0 1px 0 #bababa;
+            -webkit-transition: all linear 0.4s;
+            -moz-transition: all linear 0.4s;
+            transition: all linear 0.4s;
+        }
 
-	}
-	.vpm-field-wrap button {
-		border: none;
-		background: none;
-		height: 34px;
-		padding: 6px 15px;
-		position: absolute;
-		top: 0;
-	}
+        .header-desktop-bottom.fixed-header {
+            -webkit-transition: all linear 0.4s;
+            -moz-transition: all linear 0.4s;
+            transition: all linear 0.4s;
+        }
 
-	.header-search-wrap i {
-		color: #2964d8;
-	}
-	.vpm-field-wrap .form-control {
-		height: 34px;
-		font-size: 13px;
-		text-transform: uppercase;
-		width: 200px!important;
-		border-radius: 25px;
-		outline: none;
-		font-family: futura-bold;
-	}
-	.search-wrap form div input.form-control {
-		box-shadow: none;
-		padding: 5px 10px 5px 35px;
-		height: 34px;
-		border-radius: 50px;
-	}
-	.search-wrap,
-	.vpm-cart-wrap,
-	.vpm-user-account {
-		position: relative;
-		margin: 0;
-		padding: 0;
-	}
-	.VPMmenu-wrap.container.no-padding {
-		display: flex;
-	}
+        .VPMlogo {
+            max-width: 300px;
+            display: inline-flex;
+            vertical-align: middle;
+            position: relative;
+            top: 6px;
+        }
 
-	.vpm-user-account {
-		padding: 13px 13px;
-		text-align: center;
-		background: #ddd;
-		border-radius: 7px;
-		margin: 10px 0px;
-	}
-	.search-wrap {
-		margin: 15px 0 15px 10px;
-	}
-     .vpm-cart-wrap {
-         font-size: 20px;
-         margin: 15px 3px;
-         position: relative;
-         padding: 0px 8px;
-         cursor:pointer;
-     }
-     .vpm-cart-wrap span {
-         position: absolute;
-         top: -8px;
-         left: 15px;
-         right: 0;
-         height: 20px;
-         width: 20px;
-         font-size: 10px;
-         background: green;
-         color: wheat;
-         text-align: center;
-         line-height: 20px;
-         border-radius: 50%;
-     }
-    .VPMDesktopHeader{
-        position: relative;
-    }
-    .VPMMainMenu li{
-        position:relative;
-    }
-	 
-	.VPMMainMenu .dropdown-menu li a {
-		padding: 9px 35px;
-	}
-	.nav>li {
-		position: relative;
-		display: block;
-	}
-	.nav>li.has-megamenu{
-		position: inherit;
-		display: block;
-	}
-    .VPMMainMenu li .megamenu {
-         position: absolute;
-         top: 70%;
-         left: 0;
-         background: #f5f5f5;
-         width: 100%;
-         right: 0;
-         padding: 10px 0px;
-         opacity:0;
-         visibility: hidden;
-         transition: all ease 0.4s;
-         -webkit-transition: all ease 0.4s;
-         -o-transition: all ease 0.4s;
+        .VPMMainMenu {
+            width: 100%;
+            display: flex;
+            flex-flow: nowrap;
+            justify-content: center;
+            align-items: center;
+        }
 
-     }
-	.VPMMainMenu li .megamenu ul h4 {
-		font-size: 20px;
-		font-weight: 900;
-		border-bottom: 1.5px solid #b6b6b6;
-		padding-bottom: 8px;
-		color: #253849;
-	}
-	.VPMMainMenu li .megamenu ul li a {
-		 font-size: 14px;
-		 color: #222;
-		 text-decoration: none;
-		 display: block;
-		 font-weight: 600;
-		padding: 10px 10px;
-	 }
-	.VPMMainMenu li a{
-		  padding: 23px 15px;
-	 }
-	.VPMMainMenu li:focus{
-		  background: green;
-	}
-	.VPMMainMenu li:hover .megamenu{
-		  opacity:1;
-		  top:100%;
-		  visibility:visible;
-		  transition: all ease 0.4s;
-		  -webkit-transition: all ease 0.4s;
-		  -o-transition: all ease 0.4s;
-	 }
-	.megamenu ul {
-		margin: 2px;
-		padding: 5px;
-	}
-	.VPMMainMenu .megamenu ul li {
-		position: inherit;
-		transition: all ease 0.4s;
-		-webkit-transition: all ease 0.4s;
-		-o-transition: all ease 0.4s;
-		margin: 4px 0;
-	}
-	/*.VPMMainMenu .megamenu .megamenu-background {
-		background: #72c7cf;
-		background-image: url(https://www.vpm.com/wp-content/uploads/2019/05/052319-VPM-CCell-Vapes.jpg);
-		background-repeat: no-repeat;
-		background-size: cover;
-		background-position: center center;
-	
-	}*/
-	.VPMMainMenu .megamenu li:hover{
-		background: #b3b4b8;
-	}
+        .fixed-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
 
-	.VPMMainMenu .megamenu li:hover a {
-		color: #fff;
-	}
-	.VPMMainMenu li .megamenu ul li a.has-image {
-		font-size: 14px;
-		color: #222;
-		text-decoration: none;
-		display: block;
-		padding: 0;
-		text-align: center;
-	}
-	</style>
-  </head>
-  <body>
-	<div class="container-fluid header-desktop-top">
-		<div class="container no-padding">
-			<div id="VPMTicker" class="VPMTicker" style="display:none;">
-				<ul class="Ticker">
-					<li>Offer item 1</li>
-					<li>Offer item 2</li>
-					<li>Offer item 3</li>
-					<li>Offer item 4</li>
-				<ul class="vpm-menu-ul">
-			</div>
-		</div>
-		<div class="clearfix"></div>
-	</div>
-	<!-- Desktop Header Area Start-->
-	<div class="VPMDesktopHeader">
-		<div class="container-fluid header-desktop-bottom">
-			<div class="VPMmenu-wrap container no-padding">
+        .fixed-header .VPMMainMenu {
+            width: 100%;
 
-					<div class="VPMlogo">
-						<span class="main-logo"><img src="https://www.vpm.com/wp-content/themes/vape/images/vpm-logo-350.png"></span>
-						<span class="sticky-logo" style="display:none;"><img src="https://www.vpm.com/wp-content/uploads/2018/07/vape-parts-mart-logo-letters-only.png"></span>
-					</div>
-					    <div class="collapse navbar-collapse js-navbar-collapse">
-					<ul class="VPMMainMenu nav navbar-nav ">
-					  <li class="has-megamenu">
-                                <a href="#">Feature product</a>
-                                <div class="megamenu">
-                                   <div class="container">
-                                        <ul class="vpm-menu-ul">
-                                          
-                                          <div class="container">
-										  <h4>Trending Product<span class="pull-right"><a href="#">View all</a></span></h4>
-											  <li>
-												 <div class="col-sm-6 col-md-4">
-													<a href="#" class="thumbnail">
-													<img src="http://placehold.it/250x250" />
-													</a>
-											
-												 </div>
-												 
-												 <div class="col-sm-6 col-md-2">
-													<a href="#" class="thumbnail">
-													<img src="http://placehold.it/150x120" />
-													</a>
-												 </div>
-												 <div class="col-sm-6 col-md-2">
-													<a href="#" class="thumbnail">
-													<img src="http://placehold.it/150x120" />
-													</a>
-												 </div>
-												 <div class="col-sm-6 col-md-2">
-													<a href="#" class="thumbnail">
-													<img src="http://placehold.it/150x120" />
-													</a>
-												 </div>
-												 <div class="col-sm-6 col-md-2">
-													<a href="#" class="thumbnail">
-													<img src="http://placehold.it/150x120" />
-													</a>
-												 </div>
-												 <div class="col-sm-6 col-md-2">
-													<a href="#" class="thumbnail">
-													<img src="http://placehold.it/150x120" />
-													</a>
-												 </div>
-												 <div class="col-sm-6 col-md-2">
-													<a href="#" class="thumbnail">
-													<img src="http://placehold.it/150x120" />
-													</a>
-												 </div>
-												 <div class="col-sm-6 col-md-2">
-													<a href="#" class="thumbnail">
-													<img src="http://placehold.it/150x120" />
-													</a>
-												 </div>
-												 <div class="col-sm-6 col-md-2">
-													<a href="#" class="thumbnail">
-													<img src="http://placehold.it/150x120" />
-													</a>
-												 </div>
-											  </li>
-											</div>
-                                        </ul>
-                                   </div>
+        }
+
+        .fixed-header .VPMlogo {
+            min-width: calc(300px - 126px);
+
+        }
+
+        .header-desktop-top {
+            background: #337ab7;
+            color: #fff;
+        }
+
+        .VPMlogo .main-logo img {
+            width: 300px;
+        }
+
+        .VPMlogo .sticky-logo img {
+            width: 126px;
+            top: 7px;
+            position: absolute;
+        }
+
+        .Search-Cart-Acoount {
+            right: 15px;
+            top: 15px;
+            display: inline-flex;
+            flex-direction: row;
+
+        }
+
+        .vpm-field-wrap button {
+            border: none;
+            background: none;
+            height: 34px;
+            padding: 6px 15px;
+            position: absolute;
+            top: 0;
+            color: #2964d8;
+        }
+
+        .header-search-wrap i {
+            color: #2964d8;
+        }
+
+        .vpm-field-wrap .form-control {
+            height: 34px;
+            font-size: 13px;
+            text-transform: uppercase;
+            width: 200px !important;
+            border-radius: 25px;
+            outline: none;
+            font-family: futura-bold;
+        }
+
+        .search-wrap form div input.form-control {
+            box-shadow: none;
+            padding: 5px 10px 5px 35px;
+            height: 34px;
+            border-radius: 50px;
+        }
+
+        .search-wrap,
+        .vpm-cart-wrap,
+        .vpm-user-account {
+            position: relative;
+            margin: 0;
+            padding: 0;
+        }
+
+        .VPMmenu-wrap.container.no-padding {
+            display: flex;
+        }
+
+        .vpm-user-account {
+            padding: 13px 13px;
+            text-align: center;
+            background: #ddd;
+            border-radius: 7px;
+            margin: 10px 0px;
+        }
+
+        .search-wrap {
+            margin: 15px 0 15px 10px;
+        }
+
+        .vpm-cart-wrap {
+            font-size: 20px;
+            margin: 15px 3px;
+            position: relative;
+            padding: 0px 8px;
+            cursor: pointer;
+        }
+
+        .vpm-cart-wrap span {
+            position: absolute;
+            top: -8px;
+            left: 15px;
+            right: 0;
+            height: 20px;
+            width: 20px;
+            font-size: 10px;
+            background: green;
+            color: wheat;
+            text-align: center;
+            line-height: 20px;
+            border-radius: 50%;
+        }
+
+        .VPMDesktopHeader {
+            position: relative;
+        }
+
+        .VPMMainMenu li {
+            position: relative;
+        }
+
+        .VPMMainMenu .dropdown-menu li a {
+            padding: 9px 35px;
+        }
+
+        .nav > li {
+            position: relative;
+            display: block;
+        }
+
+        .nav > li.has-megamenu {
+            position: inherit;
+            display: block;
+        }
+
+        .VPMMainMenu li .megamenu {
+            position: absolute;
+            top: 70%;
+            left: 0;
+            background: #f5f5f5;
+            width: 100%;
+            right: 0;
+            padding: 10px 0px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all ease 0.4s;
+            -webkit-transition: all ease 0.4s;
+            -o-transition: all ease 0.4s;
+
+        }
+
+        .VPMMainMenu li .megamenu ul h4 {
+            font-size: 20px;
+            font-weight: 900;
+            border-bottom: 1.5px solid #b6b6b6;
+            padding-bottom: 8px;
+            color: #253849;
+        }
+
+        .VPMMainMenu li .megamenu ul li a {
+            font-size: 14px;
+            color: #222;
+            text-decoration: none;
+            display: block;
+            font-weight: 600;
+            padding: 10px 10px;
+        }
+
+        .VPMMainMenu li a {
+            padding: 23px 15px;
+            font-family: futura-bold;
+            font-size: 15px !important;
+        }
+
+        .VPMMainMenu li:focus {
+            background: green;
+        }
+
+        .VPMMainMenu li:hover .megamenu {
+            opacity: 1;
+            top: 100%;
+            visibility: visible;
+            transition: all ease 0.4s;
+            -webkit-transition: all ease 0.4s;
+            -o-transition: all ease 0.4s;
+        }
+        .megamenu-collapse {
+            width: 100%;
+            display: inline-flex !important;
+        }
+        .megamenu ul {
+            margin: 2px;
+            padding: 5px;
+        }
+
+        .VPMMainMenu .megamenu ul li {
+            position: inherit;
+            transition: all ease 0.4s;
+            -webkit-transition: all ease 0.4s;
+            -o-transition: all ease 0.4s;
+            margin: 4px 0;
+        }
+
+        /*.VPMMainMenu .megamenu .megamenu-background {
+            background: #72c7cf;
+            background-image: url(https://www.vpm.com/wp-content/uploads/2019/05/052319-VPM-CCell-Vapes.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+
+        }*/
+        .VPMMainMenu .megamenu li:hover {
+            background: #b3b4b8;
+        }
+
+        .VPMMainMenu .megamenu li:hover a {
+            color: #fff;
+        }
+
+        .VPMMainMenu li .megamenu ul li a.has-image {
+            font-size: 14px;
+            color: #222;
+            text-decoration: none;
+            display: block;
+            padding: 0;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid header-desktop-top">
+    <div class="container no-padding">
+        <div id="VPMTicker" class="VPMTicker" style="display:none;">
+            <ul class="Ticker">
+                <li>Offer item 1</li>
+                <li>Offer item 2</li>
+                <li>Offer item 3</li>
+                <li>Offer item 4</li>
+                <ul class="vpm-menu-ul">
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<!-- Desktop Header Area Start-->
+<div class="VPMDesktopHeader">
+    <div class="container-fluid header-desktop-bottom">
+        <div class="VPMmenu-wrap container no-padding">
+
+            <div class="VPMlogo">
+                <span class="main-logo"><img src="https://www.vpm.com/wp-content/themes/vape/images/vpm-logo-350.png"></span>
+                <span class="sticky-logo" style="display:none;"><img src="https://www.vpm.com/wp-content/uploads/2018/07/vape-parts-mart-logo-letters-only.png"></span>
+            </div>
+            <div class="megamenu-collapse collapse navbar-collapse js-navbar-collapse">
+                <ul class="VPMMainMenu nav navbar-nav ">
+                    <li class="has-megamenu">
+                        <a href="#">Feature product</a>
+                        <div class="megamenu">
+                            <div class="container">
+                                <ul class="vpm-menu-ul">
+
+                                    <div class="container">
+                                        <h4>Trending Product<span class="pull-right"><a href="#">View all</a></span></h4>
+                                        <li>
+                                            <div class="col-sm-6 col-md-4">
+                                                <a href="#" class="thumbnail">
+                                                    <img src="http://placehold.it/250x250"/>
+                                                </a>
+
+                                            </div>
+
+                                            <div class="col-sm-6 col-md-2">
+                                                <a href="#" class="thumbnail">
+                                                    <img src="http://placehold.it/150x120"/>
+                                                </a>
+                                            </div>
+                                            <div class="col-sm-6 col-md-2">
+                                                <a href="#" class="thumbnail">
+                                                    <img src="http://placehold.it/150x120"/>
+                                                </a>
+                                            </div>
+                                            <div class="col-sm-6 col-md-2">
+                                                <a href="#" class="thumbnail">
+                                                    <img src="http://placehold.it/150x120"/>
+                                                </a>
+                                            </div>
+                                            <div class="col-sm-6 col-md-2">
+                                                <a href="#" class="thumbnail">
+                                                    <img src="http://placehold.it/150x120"/>
+                                                </a>
+                                            </div>
+                                            <div class="col-sm-6 col-md-2">
+                                                <a href="#" class="thumbnail">
+                                                    <img src="http://placehold.it/150x120"/>
+                                                </a>
+                                            </div>
+                                            <div class="col-sm-6 col-md-2">
+                                                <a href="#" class="thumbnail">
+                                                    <img src="http://placehold.it/150x120"/>
+                                                </a>
+                                            </div>
+                                            <div class="col-sm-6 col-md-2">
+                                                <a href="#" class="thumbnail">
+                                                    <img src="http://placehold.it/150x120"/>
+                                                </a>
+                                            </div>
+                                            <div class="col-sm-6 col-md-2">
+                                                <a href="#" class="thumbnail">
+                                                    <img src="http://placehold.it/150x120"/>
+                                                </a>
+                                            </div>
+                                        </li>
+                                    </div>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="has-megamenu">
+                        <a href="#">VPM Brands</a>
+                        <div class="megamenu">
+                            <div class="container">
+                                <div class="col-md-3 megamenu-column">
+                                    <ul class="vpm-menu-ul">
+                                        <h4>By Type</h4>
+                                        <li><a href="#">Home2</a></li>
+                                        <li><a href="#">Page 2</a></li>
+                                        <li><a href="#">Page 3</a></li>
+                                        <li><a href="#">Page 4</a></li>
+                                        <li><a href="#">Page 5</a></li>
+                                        <li><a class="has-image" href="#"><img src="http://placehold.it/200x40"></a></li>
+                                    </ul>
                                 </div>
-                           </li>
-                           <li class="has-megamenu">
-                                <a href="#">VPM Brands</a>
-                                <div class="megamenu">
-                                   <div class="container">
-                                        <div class="col-md-3 megamenu-column">
-                                             <ul class="vpm-menu-ul">
-                                             <h4>By Type</h4>
-                                               <li><a href="#">Home2</a></li>
-                      					  <li><a href="#">Page 2</a></li>
-                      					  <li><a href="#">Page 3</a></li>
-                      					  <li><a href="#">Page 4</a></li>
-                      					  <li><a href="#">Page 5</a></li>
-										  <li><a class="has-image" href="#"><img src="http://placehold.it/200x40"></a></li>
-                                             </ul>
-                                        </div>
-                                        <div class="col-md-3 megamenu-column">
-                                             <ul class="vpm-menu-ul">
-                                             <h4>By Use</h4>
-                                               <li><a href="#">Page 1</a></li>
-                      					  <li><a href="#">Page 2</a></li>
-                      					  <li><a href="#">Page 3</a></li>
-                      					  <li><a href="#">Page 4</a></li>
-                      					  <li><a href="#">Page 5</a></li>
-										  <li><a class="has-image" href="#"><img src="http://placehold.it/200x40"></a></li>
-                                             </ul>
-                                        </div>
-                                        <div class="col-md-3 megamenu-column">
-                                             <ul class="vpm-menu-ul">
-                                             <h4>By Brand</h4>
-                                               <li><a href="#">Page 1</a></li>
-                      					  <li><a href="#">Page 2</a></li>
-                      					  <li><a href="#">Page 3</a></li>
-                      					  <li><a href="#">Page 4</a></li>
-                      					  <li><a href="#">Page 5</a></li>
-										  <li><a class="has-image" href="#"><img src="http://placehold.it/200x40"></a></li>
-                                             </ul>
-                                        </div>
-                                        <div class="col-md-3 megamenu-column">
-                                             <ul class="vpm-menu-ul">
-                                             <h4>Feature Brand</h4>
-												<li><a class="has-image" href="#"><img src="http://placehold.it/200x40"></a></li>
-												<li><a class="has-image" href="#"><img src="http://placehold.it/200x40"></a></li>
-												<li><a class="has-image" href="#"><img src="http://placehold.it/200x40"></a></li>
-												<li><a class="has-image" href="#"><img src="http://placehold.it/200x40"></a></li>
-												<li><a class="has-image" href="#"><img src="http://placehold.it/200x40"></a></li>
-                                             </ul>
-                                        </div>
-										<div class="col-md-12 megamenu-column">
-                                             <ul class="vpm-menu-ul">
-                                             <h4>Feature Brand</h4>
-												<li>There is no CSS property background-opacity, but you can fake it by inserting a pseudo element with regular opacity the exact size of the element behind it.</li>
-                                             </ul>
-                                        </div>
-                                   </div>
+                                <div class="col-md-3 megamenu-column">
+                                    <ul class="vpm-menu-ul">
+                                        <h4>By Use</h4>
+                                        <li><a href="#">Page 1</a></li>
+                                        <li><a href="#">Page 2</a></li>
+                                        <li><a href="#">Page 3</a></li>
+                                        <li><a href="#">Page 4</a></li>
+                                        <li><a href="#">Page 5</a></li>
+                                        <li><a class="has-image" href="#"><img src="http://placehold.it/200x40"></a></li>
+                                    </ul>
                                 </div>
-                           </li>
-                           <li class="has-megamenu">
-                                <a href="#">Vape Parts</a>
-                                <div class="megamenu">
-                                   <div class="container megamenu-background">
-                                        <div class="col-md-3 megamenu-column">
-                                             <ul class="vpm-menu-ul">
-                                             <h4>By Type</h4>
-                                               <li><a href="#">home3</a></li>
-                      					  <li><a href="#">Page 2</a></li>
-                      					  <li><a href="#">Page 3</a></li>
-                      					  <li><a href="#">Page 4</a></li>
-                      					  <li><a href="#">Page 5</a></li>
-                                             </ul>
-                                        </div>
-                                        <div class="col-md-3 megamenu-column">
-                                             <ul class="vpm-menu-ul">
-                                             <h4>By Use</h4>
-                                               <li><a href="#">Page 1</a></li>
-                      					  <li><a href="#">Page 2</a></li>
-                      					  <li><a href="#">Page 3</a></li>
-                      					  <li><a href="#">Page 4</a></li>
-                      					  <li><a href="#">Page 5</a></li>
-                                             </ul>
-                                        </div>
-                                        <div class="col-md-3 megamenu-column">
-                                             <ul class="vpm-menu-ul">
-                                             <h4>By Brand</h4>
-                                               <li><a href="#">Page 1</a></li>
-                      					  <li><a href="#">Page 2</a></li>
-                      					  <li><a href="#">Page 3</a></li>
-                      					  <li><a href="#">Page 4</a></li>
-                      					  <li><a href="#">Page 5</a></li>
-                                             </ul>
-                                        </div>
-										<div class="col-md-3 megamenu-column">
-                                        <ul class="vpm-menu-ul">
-										  <h4>By Brand</h4>
-                                          <li><a href="#">Page 1</a></li>
-                      					  <li><a href="#">Page 2</a></li>
-                      					  <li><a href="#">Page 3</a></li>
-                      					  <li><a href="#">Page 4</a></li>
-                      					  <li><a href="#">Page 5</a></li>
-                                        </ul>
-                                        </div>
-                                   </div>
+                                <div class="col-md-3 megamenu-column">
+                                    <ul class="vpm-menu-ul">
+                                        <h4>By Brand</h4>
+                                        <li><a href="#">Page 1</a></li>
+                                        <li><a href="#">Page 2</a></li>
+                                        <li><a href="#">Page 3</a></li>
+                                        <li><a href="#">Page 4</a></li>
+                                        <li><a href="#">Page 5</a></li>
+                                        <li><a class="has-image" href="#"><img src="http://placehold.it/200x40"></a></li>
+                                    </ul>
                                 </div>
-                           </li>
-			
-					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Normal Dropdown <b class="caret"></b></a>
-						<ul class="dropdown-menu">
-							<li><a href="#">Action</a></li>
-							<li><a href="#">Another action</a></li>
-							<li><a href="#">Something else here</a></li>
-							<li class="divider"></li>
-							<li><a href="#">Separated link</a></li>
-						</ul>
-					</li>
+                                <div class="col-md-3 megamenu-column">
+                                    <ul class="vpm-menu-ul">
+                                        <h4>Feature Brand</h4>
+                                        <li><a class="has-image" href="#"><img src="http://placehold.it/200x40"></a></li>
+                                        <li><a class="has-image" href="#"><img src="http://placehold.it/200x40"></a></li>
+                                        <li><a class="has-image" href="#"><img src="http://placehold.it/200x40"></a></li>
+                                        <li><a class="has-image" href="#"><img src="http://placehold.it/200x40"></a></li>
+                                        <li><a class="has-image" href="#"><img src="http://placehold.it/200x40"></a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-12 megamenu-column">
+                                    <ul class="vpm-menu-ul">
+                                        <h4>Feature Brand</h4>
+                                        <li>There is no CSS property background-opacity, but you can fake it by inserting a pseudo element with regular opacity the exact size of the element behind it.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="has-megamenu">
+                        <a href="#">Vape Parts</a>
+                        <div class="megamenu">
+                            <div class="container megamenu-background">
+                                <div class="col-md-3 megamenu-column">
+                                    <ul class="vpm-menu-ul">
+                                        <h4>By Type</h4>
+                                        <li><a href="#">home3</a></li>
+                                        <li><a href="#">Page 2</a></li>
+                                        <li><a href="#">Page 3</a></li>
+                                        <li><a href="#">Page 4</a></li>
+                                        <li><a href="#">Page 5</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-3 megamenu-column">
+                                    <ul class="vpm-menu-ul">
+                                        <h4>By Use</h4>
+                                        <li><a href="#">Page 1</a></li>
+                                        <li><a href="#">Page 2</a></li>
+                                        <li><a href="#">Page 3</a></li>
+                                        <li><a href="#">Page 4</a></li>
+                                        <li><a href="#">Page 5</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-3 megamenu-column">
+                                    <ul class="vpm-menu-ul">
+                                        <h4>By Brand</h4>
+                                        <li><a href="#">Page 1</a></li>
+                                        <li><a href="#">Page 2</a></li>
+                                        <li><a href="#">Page 3</a></li>
+                                        <li><a href="#">Page 4</a></li>
+                                        <li><a href="#">Page 5</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-3 megamenu-column">
+                                    <ul class="vpm-menu-ul">
+                                        <h4>By Brand</h4>
+                                        <li><a href="#">Page 1</a></li>
+                                        <li><a href="#">Page 2</a></li>
+                                        <li><a href="#">Page 3</a></li>
+                                        <li><a href="#">Page 4</a></li>
+                                        <li><a href="#">Page 5</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
 
-					</ul>
-					</div>
-					<div class="Search-Cart-Acoount pull-right">
-						<div class="search-wrap">
-							<form method="get" id="header-inline-search" role="search" action="#" _lpchecked="1">
-								<div class="vpm-field-wrap">
-									<input type="hidden" name="post_type" value="product">
-									<input id="live_product_search" type="text" class="form-control" name="s" placeholder="Search store..." autocomplete="off" required="">
-									<button type="submit"><i class="icon-search"></i></button>
-								</div>
-							</form>
-						</div>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Normal Dropdown <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
 
-						<div class="vpm-cart-wrap">
-                                   <i class="icon-shopping-cart"></i>
-                                   <span>10</span>
-                              </div>
-					</div>
-			</div>
-		</div>
-		 <div class="clearfix"></div>
-	</div>
-	<!-- Desktop Header Area End-->
-	<!-- Mobile Header Area Start-->
-	<div class="container row VPMMobileHeader" style="display:none">
-		<div class="header-mobile-top">
+                </ul>
+            </div>
+            <div class="Search-Cart-Acoount pull-right">
+                <div class="search-wrap">
+                    <form method="get" id="header-inline-search" role="search" action="#" _lpchecked="1">
+                        <div class="vpm-field-wrap">
+                            <input type="hidden" name="post_type" value="product">
+                            <input id="live_product_search" type="text" class="form-control" name="s" placeholder="Search store..." autocomplete="off" required="">
+                            <button type="submit"><i class="icon-search"></i></button>
+                        </div>
+                    </form>
+                </div>
 
-		</div>
-		<div class="header-mobile-bottom">
+                <div class="vpm-cart-wrap">
+                    <i class="icon-shopping-cart"></i>
+                    <span>10</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="clearfix"></div>
+</div>
+<!-- Desktop Header Area End-->
+<!-- Mobile Header Area Start-->
+<div class="container row VPMMobileHeader" style="display:none">
+    <div class="header-mobile-top">
+
+    </div>
+    <div class="header-mobile-bottom">
 
 
-		</div>
+    </div>
 
-		</div>
-		<!-- Mobile Header Area End-->
+</div>
+<!-- Mobile Header Area End-->
 
-	</div>
-
-
+</div>
 
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="js/jquery-3.4.1.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/ticker.js"></script>
-    <script src="js/custom.js"></script>
-  </body>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery-3.4.1.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/ticker.js"></script>
+<script src="js/custom.js"></script>
+</body>
 </html>
