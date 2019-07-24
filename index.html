@@ -174,16 +174,20 @@
          line-height: 20px;
          border-radius: 50%;
      }
-     .VPMDesktopHeader{
-          position: relative;
-     }
-     .VPMMainMenu li{
-          position:inherit;
-     }
+    .VPMDesktopHeader{
+        position: relative;
+    }
+    .VPMMainMenu li{
+        position:relative;
+    }
+	 
+	.VPMMainMenu .dropdown-menu li a {
+		padding: 9px 35px;
+	}
     .nav>li {
          position: inherit;
          display: block;
-     }
+    }
     .VPMMainMenu li .megamenu {
          position: absolute;
          top: 170%;
@@ -219,7 +223,7 @@
 	 }
 	.VPMMainMenu li:focus{
 		  background: green;
-	  }
+	}
 	.VPMMainMenu li:hover .megamenu{
 		  opacity:1;
 		  top:100%;
@@ -239,6 +243,14 @@
 		-o-transition: all ease 0.3s;
 		margin: 4px 0;
 	}
+	/*.VPMMainMenu .megamenu .megamenu-background {
+		background: #72c7cf;
+		background-image: url(https://www.vpm.com/wp-content/uploads/2019/05/052319-VPM-CCell-Vapes.jpg);
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center center;
+	
+	}*/
 	.VPMMainMenu .megamenu li:hover{
 		background: #b3b4b8;
 	}
@@ -257,8 +269,6 @@
 	</style>
   </head>
   <body>
-
-
 	<div class="container-fluid header-desktop-top">
 		<div class="container no-padding">
 			<div id="VPMTicker" class="VPMTicker" style="display:none;">
@@ -267,7 +277,7 @@
 					<li>Offer item 2</li>
 					<li>Offer item 3</li>
 					<li>Offer item 4</li>
-				<ul>
+				<ul class="vpm-menu-ul">
 			</div>
 		</div>
 		<div class="clearfix"></div>
@@ -281,36 +291,24 @@
 						<span class="main-logo"><img src="https://www.vpm.com/wp-content/themes/vape/images/vpm-logo-350.png"></span>
 						<span class="sticky-logo" style="display:none;"><img src="https://www.vpm.com/wp-content/uploads/2018/07/vape-parts-mart-logo-letters-only.png"></span>
 					</div>
+					    <div class="collapse navbar-collapse js-navbar-collapse">
 					<ul class="VPMMainMenu nav navbar-nav ">
 					  <li>
                                 <a href="#">Feature product</a>
                                 <div class="megamenu">
-                                   <div class="container megamenu-background">
-                                        <ul>
+                                   <div class="container">
+                                        <ul class="vpm-menu-ul">
                                           
                                           <div class="container">
 										  <h4>Trending Product<span class="pull-right"><a href="#">View all</a></span></h4>
 											  <li>
-												 <div class="col-sm-6 col-md-2">
+												 <div class="col-sm-6 col-md-4">
 													<a href="#" class="thumbnail">
-													<img src="http://placehold.it/150x120" />
+													<img src="http://placehold.it/250x250" />
 													</a>
+											
 												 </div>
-												 <div class="col-sm-6 col-md-2">
-													<a href="#" class="thumbnail">
-													<img src="http://placehold.it/150x120" />
-													</a>
-												 </div>
-												 <div class="col-sm-6 col-md-2">
-													<a href="#" class="thumbnail">
-													<img src="http://placehold.it/150x120" />
-													</a>
-												 </div>
-												 <div class="col-sm-6 col-md-2">
-													<a href="#" class="thumbnail">
-													<img src="http://placehold.it/150x120" />
-													</a>
-												 </div>
+												 
 												 <div class="col-sm-6 col-md-2">
 													<a href="#" class="thumbnail">
 													<img src="http://placehold.it/150x120" />
@@ -362,37 +360,40 @@
                                 <div class="megamenu">
                                    <div class="container">
                                         <div class="col-md-3 megamenu-column">
-                                             <ul>
+                                             <ul class="vpm-menu-ul">
                                              <h4>By Type</h4>
                                                <li><a href="#">Home2</a></li>
                       					  <li><a href="#">Page 2</a></li>
                       					  <li><a href="#">Page 3</a></li>
                       					  <li><a href="#">Page 4</a></li>
                       					  <li><a href="#">Page 5</a></li>
+										  <li><a class="has-image" href="#"><img src="http://placehold.it/200x40"></a></li>
                                              </ul>
                                         </div>
                                         <div class="col-md-3 megamenu-column">
-                                             <ul>
+                                             <ul class="vpm-menu-ul">
                                              <h4>By Use</h4>
                                                <li><a href="#">Page 1</a></li>
                       					  <li><a href="#">Page 2</a></li>
                       					  <li><a href="#">Page 3</a></li>
                       					  <li><a href="#">Page 4</a></li>
                       					  <li><a href="#">Page 5</a></li>
+										  <li><a class="has-image" href="#"><img src="http://placehold.it/200x40"></a></li>
                                              </ul>
                                         </div>
                                         <div class="col-md-3 megamenu-column">
-                                             <ul>
+                                             <ul class="vpm-menu-ul">
                                              <h4>By Brand</h4>
                                                <li><a href="#">Page 1</a></li>
                       					  <li><a href="#">Page 2</a></li>
                       					  <li><a href="#">Page 3</a></li>
                       					  <li><a href="#">Page 4</a></li>
                       					  <li><a href="#">Page 5</a></li>
+										  <li><a class="has-image" href="#"><img src="http://placehold.it/200x40"></a></li>
                                              </ul>
                                         </div>
                                         <div class="col-md-3 megamenu-column">
-                                             <ul>
+                                             <ul class="vpm-menu-ul">
                                              <h4>Feature Brand</h4>
 												<li><a class="has-image" href="#"><img src="http://placehold.it/200x40"></a></li>
 												<li><a class="has-image" href="#"><img src="http://placehold.it/200x40"></a></li>
@@ -401,15 +402,21 @@
 												<li><a class="has-image" href="#"><img src="http://placehold.it/200x40"></a></li>
                                              </ul>
                                         </div>
+										<div class="col-md-12 megamenu-column">
+                                             <ul class="vpm-menu-ul">
+                                             <h4>Feature Brand</h4>
+												<li>There is no CSS property background-opacity, but you can fake it by inserting a pseudo element with regular opacity the exact size of the element behind it.</li>
+                                             </ul>
+                                        </div>
                                    </div>
                                 </div>
                            </li>
                            <li>
                                 <a href="#">Vape Parts</a>
                                 <div class="megamenu">
-                                   <div class="container">
+                                   <div class="container megamenu-background">
                                         <div class="col-md-3 megamenu-column">
-                                             <ul>
+                                             <ul class="vpm-menu-ul">
                                              <h4>By Type</h4>
                                                <li><a href="#">home3</a></li>
                       					  <li><a href="#">Page 2</a></li>
@@ -419,7 +426,7 @@
                                              </ul>
                                         </div>
                                         <div class="col-md-3 megamenu-column">
-                                             <ul>
+                                             <ul class="vpm-menu-ul">
                                              <h4>By Use</h4>
                                                <li><a href="#">Page 1</a></li>
                       					  <li><a href="#">Page 2</a></li>
@@ -429,7 +436,7 @@
                                              </ul>
                                         </div>
                                         <div class="col-md-3 megamenu-column">
-                                             <ul>
+                                             <ul class="vpm-menu-ul">
                                              <h4>By Brand</h4>
                                                <li><a href="#">Page 1</a></li>
                       					  <li><a href="#">Page 2</a></li>
@@ -439,7 +446,7 @@
                                              </ul>
                                         </div>
 										<div class="col-md-3 megamenu-column">
-                                        <ul>
+                                        <ul class="vpm-menu-ul">
 										  <h4>By Brand</h4>
                                           <li><a href="#">Page 1</a></li>
                       					  <li><a href="#">Page 2</a></li>
@@ -451,9 +458,20 @@
                                    </div>
                                 </div>
                            </li>
-					  <li><a href="#">Page 5</a></li>
-					</ul>
+			
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Normal Dropdown <b class="caret"></b></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+						</ul>
+					</li>
 
+					</ul>
+					</div>
 					<div class="Search-Cart-Acoount">
 						<div class="search-wrap">
 							<form method="get" id="header-inline-search" role="search" action="#" _lpchecked="1">
