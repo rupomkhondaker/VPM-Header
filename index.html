@@ -184,10 +184,14 @@
 	.VPMMainMenu .dropdown-menu li a {
 		padding: 9px 35px;
 	}
-    .nav>li {
-         position: inherit;
-         display: block;
-    }
+	.nav>li {
+		position: relative;
+		display: block;
+	}
+	.nav>li.has-megamenu{
+		position: inherit;
+		display: block;
+	}
     .VPMMainMenu li .megamenu {
          position: absolute;
          top: 170%;
@@ -293,7 +297,7 @@
 					</div>
 					    <div class="collapse navbar-collapse js-navbar-collapse">
 					<ul class="VPMMainMenu nav navbar-nav ">
-					  <li>
+					  <li class="has-megamenu">
                                 <a href="#">Feature product</a>
                                 <div class="megamenu">
                                    <div class="container">
@@ -355,7 +359,7 @@
                                    </div>
                                 </div>
                            </li>
-                           <li>
+                           <li class="has-megamenu">
                                 <a href="#">VPM Brands</a>
                                 <div class="megamenu">
                                    <div class="container">
@@ -411,7 +415,7 @@
                                    </div>
                                 </div>
                            </li>
-                           <li>
+                           <li class="has-megamenu">
                                 <a href="#">Vape Parts</a>
                                 <div class="megamenu">
                                    <div class="container megamenu-background">
