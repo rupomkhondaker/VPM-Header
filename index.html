@@ -312,22 +312,38 @@
             padding: 0;
             text-align: center;
         }
+
+        @media (min-width: 992px) and (max-width: 1199px)  {
+            .VPMMainMenu li a {
+                padding: 23px 10px;
+            }
+            .VPMlogo {
+                min-width: 230px;
+                width: 230px;
+                top: 11px;
+            }
+            .VPMlogo .sticky-logo img {
+                top: 3px;
+            }
+        }
     </style>
 </head>
 <body>
 <div class="container-fluid header-desktop-top">
-    <div class="container no-padding">
-        <div id="VPMTicker" class="VPMTicker" style="display:none;">
-            <ul class="Ticker">
-                <li>Offer item 1</li>
-                <li>Offer item 2</li>
-                <li>Offer item 3</li>
-                <li>Offer item 4</li>
-            </ul>
-            <ul class="vpm-menu-ul"></ul>
+    <div class="row">
+        <div class="container">
+            <div id="VPMTicker" class="VPMTicker" style="display:none;">
+                <ul class="Ticker">
+                    <li>Offer item 1</li>
+                    <li>Offer item 2</li>
+                    <li>Offer item 3</li>
+                    <li>Offer item 4</li>
+                </ul>
+                <ul class="vpm-menu-ul"></ul>
+            </div>
         </div>
+        <div class="clearfix"></div>
     </div>
-    <div class="clearfix"></div>
 </div>
 <!-- Desktop Header Area Start-->
 <div class="VPMDesktopHeader">
