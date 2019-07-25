@@ -38,8 +38,21 @@
 					$("#VPMTicker").fadeIn('slow').show();
 			  }, 5000);
         };
+		//Mobile menu toggleClass
+		var $main_nav = $('#main-nav');
+          var $toggle = $('.toggle');
+          var defaultData = {
+            maxWidth: false,
+            customToggle: $toggle,
+            navTitle: 'Vape Parts Mart',
+            levelTitles: true,
+            insertClose: 2,
+            closeLevels: false
+          };
+          // call our plugin
+          var Nav = $main_nav.hcOffcanvasNav(defaultData);
 
-  });
+		});
   
   /*//fixed navigation on top when scrolling
 			if (screen && screen.width > 768) {
