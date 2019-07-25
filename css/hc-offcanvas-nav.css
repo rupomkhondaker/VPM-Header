@@ -274,7 +274,6 @@ body.hc-nav-open {
 }
 
 .hc-nav-trigger {
-    position: absolute;
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -434,8 +433,8 @@ body.hc-nav-open {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 6px;
-    height: 6px;
+    width: 8px;
+    height: 8px;
     margin-top: -3px;
     border-top: 2px solid #fff;
     border-left: 2px solid #fff

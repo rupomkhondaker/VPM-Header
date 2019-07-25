@@ -327,7 +327,37 @@
                 top: 3px;
             }
         }
-    </style>
+        @media (max-width: 991px){
+			.container-mobile {
+				width: 100%;
+				box-shadow: 0 0 1px 0 #bababa;
+				
+			}
+			.header-mobile-bottom.fixed-header{
+				box-shadow: 0 0 1px 0 #bababa;
+			}
+			.VPMMobileMenuWrap {
+				min-height: 65px;
+				display: flex;
+				position: relative;
+				margin:0 10px;
+			}
+
+			.mobile-action-icons {
+				position: absolute;
+				right: 0;
+				display: inline-flex;
+				min-width: 200px;
+				text-align: center;
+			}
+			.main-menu-button-wrapper {
+				padding: 5px 15px;
+			}
+			#fly-search {
+				padding: 5px 15px;
+			}
+        }
+    </style>    
 </head>
 <body>
 <div class="container-fluid header-desktop-top">
@@ -532,15 +562,26 @@
 </div>
 <!-- Desktop Header Area End-->
 <!-- Mobile Header Area Start-->
-<div class="VPMMobileHeader container visible-xs visible-sm">
-    <div class="header-mobile-top">
-
-    </div>
+<div class="VPMMobileHeader container-mobile visible-xs visible-sm">
     <div class="header-mobile-bottom">
-		    <div class="VPMlogo">
-                <span class="main-logo"><img src="https://www.vpm.com/wp-content/themes/vape/images/vpm-logo-350.png"></span>
-                <span class="sticky-logo" style="display:none;"><img src="https://www.vpm.com/wp-content/uploads/2018/07/vape-parts-mart-logo-letters-only.png"></span>
-            </div>
+		<div class="VPMMobileMenuWrap">
+			<div class="VPMlogo">
+				<span class="main-logo"><img src="https://www.vpm.com/wp-content/themes/vape/images/vpm-logo-350.png"></span>
+				<span class="sticky-logo" style="display:none;"><img src="https://www.vpm.com/wp-content/uploads/2018/07/vape-parts-mart-logo-letters-only.png"></span>
+			</div>
+			
+			<div class="mobile-action-icons pull-right">
+				<div class="main-menu-button-wrapper">
+					<span id="menu-icon-no-scroll-menu" class="toggle menu-icon-pos"><img width="35" src="https://www.vpm.com/wp-content/themes/vape/images/mobile-menuicon/Mobile-Shop-Menu-Icon.png" alt="Menu" class="lazyloading" data-was-processed="true"></span>	
+					<span id="menu-icon-scroll-menu" class="toggle menu-icon-pos" style="display:none"><img width="35" src="https://www.vpm.com/wp-content/themes/vape/images/mobile-menuicon/Mobile-Shop-Menu-Icon-Scroll.png" alt="Menu"></span>	
+				</div>
+				<div class="clearfix"></div>
+				<div id="fly-search">
+					<span id="menu-icon-no-scroll-search" class="fly-search-icon"><img width="40" src="https://www.vpm.com/wp-content/themes/vape/images/mobile-menuicon/Mobile-Search-Icon.png" alt="Search" class="lazyloading" data-was-processed="true"></span>
+					<span id="menu-icon-scroll-search" class="fly-search-icon" style="display:none"><img width="35" src="https://www.vpm.com/wp-content/themes/vape/images/mobile-menuicon/Mobile-Search-Icon-Scroll.png" alt="Search"></span>
+				</div>
+			</div>
+		</div>
     </div>
 	<div class="wrapper cf">
     <nav id="main-nav" style="display:none!important;">
@@ -670,7 +711,7 @@
 </div>
 <div class="container">
 	<!-- Mobile Header Area End-->
-	<a class="toggle"><h3>Vape Parts Mart</h3></a>
+	
 </div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery-3.4.1.js"></script>
