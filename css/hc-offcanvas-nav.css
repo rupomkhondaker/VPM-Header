@@ -32,7 +32,6 @@ body.hc-nav-open {
     max-height: 100%;
     box-sizing: border-box;
     transition: -webkit-transform .4s ease;
-    transition: transform .4s ease;
     transition: transform .4s ease, -webkit-transform .4s ease
 }
 
@@ -359,7 +358,7 @@ body.hc-nav-open {
 .hc-offcanvas-nav .nav-container,
 .hc-offcanvas-nav .nav-wrapper,
 .hc-offcanvas-nav ul {
-    background: #336ca6
+    background: #ffffff;
 }
 
 .hc-offcanvas-nav h2 {
@@ -374,10 +373,10 @@ body.hc-nav-open {
 .hc-offcanvas-nav .nav-item {
     padding: 14px 17px;
     font-size: 15px;
-    color: #fff;
+    color: #253849;
     z-index: 1;
     background: rgba(0, 0, 0, 0);
-    border-bottom: 1px solid #2c5d8f
+    border-bottom: 1px solid #babcbf;
 }
 
 .hc-offcanvas-nav:not(.touch-device) a:hover {
@@ -395,14 +394,14 @@ body.hc-nav-open {
 
 .hc-offcanvas-nav li.nav-close a,
 .hc-offcanvas-nav li.nav-back a {
-    background: #2c5d8f;
-    border-top: 1px solid #295887;
-    border-bottom: 1px solid #295887
+    background: #d5d4d4;
+    border-top: 1px solid #babcbf;
+    border-bottom: 1px solid #babcbf
 }
 
 .hc-offcanvas-nav li.nav-close a:hover,
 .hc-offcanvas-nav li.nav-back a:hover {
-    background: #2b5c8d
+    background: #d5d4d4
 }
 
 .hc-offcanvas-nav li.nav-close:not(:first-child) a,
@@ -436,8 +435,8 @@ body.hc-nav-open {
     width: 8px;
     height: 8px;
     margin-top: -3px;
-    border-top: 2px solid #fff;
-    border-left: 2px solid #fff
+    border-top: 2px solid #253849;
+    border-left: 2px solid #253849
 }
 
 .hc-offcanvas-nav li.nav-close span::before {
@@ -471,8 +470,8 @@ body.hc-nav-open {
     height: 8px;
     margin-left: -2px;
     box-sizing: border-box;
-    border-top: 2px solid #fff;
-    border-left: 2px solid #fff;
+    border-top: 2px solid #253849;
+    border-left: 2px solid #253849;
     -webkit-transform-origin: center;
     -o-transform-origin: center;
     -ms-transform-origin: center;
@@ -700,33 +699,34 @@ footer .swm:not(:hover) svg .l-3 {
     padding-top: 0
 }
 
+
 .hc-offcanvas-nav li.search input[type="text"] {
     width: 100%;
     box-sizing: border-box;
     border: none;
     border-radius: 3px;
     font-size: 14px;
-    color: #fff;
-    background: rgba(255, 255, 255, 0.12);
+    color: #253849;
+    background: rgba(0, 0, 0, 0.22);
     padding: 5px 10px;
     box-shadow: none;
     outline: none
 }
 
 .hc-offcanvas-nav li.search input[type="text"]::-webkit-input-placeholder {
-    color: rgba(255, 255, 255, 0.8)
+    color: #253849;
 }
 
 .hc-offcanvas-nav li.search input[type="text"]:-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.8)
+    color: #253849;
 }
 
 .hc-offcanvas-nav li.search input[type="text"]::-ms-input-placeholder {
-    color: rgba(255, 255, 255, 0.8)
+    color: #253849;
 }
 
 .hc-offcanvas-nav li.search input[type="text"]::placeholder {
-    color: rgba(255, 255, 255, 0.8)
+    color: #253849;
 }
 
 .hc-offcanvas-nav ul.bottom-nav {
@@ -737,7 +737,7 @@ footer .swm:not(:hover) svg .l-3 {
     display: flex;
     flex-wrap: nowrap;
     align-items: stretch;
-    border-top: 1px solid #2c5d8f
+    border-top: 1px solid #babcbf
 }
 
 .hc-offcanvas-nav ul.bottom-nav li {
@@ -752,7 +752,7 @@ footer .swm:not(:hover) svg .l-3 {
 }
 
 .hc-offcanvas-nav ul.bottom-nav li svg {
-    fill: #fff;
+    fill: #253849;
     display: inline-block;
     vertical-align: middle
 }

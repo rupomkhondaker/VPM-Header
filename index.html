@@ -368,8 +368,21 @@
 			}
 			.mobile-action-icons {
 				min-width: 160px;
+                justify-content: flex-end;
 			}
 		}
+        @media (max-width: 380px){
+            .main-logo {
+                display: none !important;
+            }
+            .sticky-logo {
+                display: block !important;
+            }
+            .VPMlogo .sticky-logo img {
+                top: 0;
+            }
+        }
+
     </style>    
 </head>
 <body>
