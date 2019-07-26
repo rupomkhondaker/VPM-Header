@@ -5,10 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>vpm</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/hc-offcanvas-nav.css">
+	
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 
 
@@ -248,7 +250,7 @@
             text-decoration: none;
             display: block;
             font-weight: 600;
-            padding: 10px 10px;
+            padding: 5px 10px;
         }
 
         .VPMMainMenu li a {
@@ -297,7 +299,7 @@
 
         }*/
         .VPMMainMenu .megamenu li:hover {
-            background: #b3b4b8;
+            background: #253849;
         }
 
         .VPMMainMenu .megamenu li:hover a {
@@ -310,7 +312,6 @@
             text-decoration: none;
             display: block;
             padding: 0;
-            text-align: center;
         }
 
         @media (min-width: 992px) and (max-width: 1199px)  {
@@ -326,7 +327,50 @@
                 top: 3px;
             }
         }
-    </style>
+        @media (max-width: 991px){ 
+			.container-mobile {
+				width: 100%;
+				box-shadow: 0 0 1px 0 #bababa;
+				
+			}
+			.header-mobile-bottom.fixed-header{
+				box-shadow: 0 0 1px 0 #bababa;
+			}
+			.VPMMobileMenuWrap {
+				min-height: 65px;
+				display: flex;
+				position: relative;
+				margin:0 10px;
+			}
+
+			.mobile-action-icons {
+				position: absolute;
+				right: 0;
+				display: inline-flex;
+				min-width: 200px;
+				text-align: center;
+			}
+			.main-menu-button-wrapper {
+				padding: 5px 15px;
+			}
+			#fly-search {
+				padding: 5px 15px;
+			}
+        }
+		@media (max-width: 767px){
+			.VPMlogo {
+				min-width: 200px;
+				width: 200px;
+				display: flex;
+				vertical-align: middle;
+				position: relative;
+				top: 14px;
+			}
+			.mobile-action-icons {
+				min-width: 160px;
+			}
+		}
+    </style>    
 </head>
 <body>
 <div class="container-fluid header-desktop-top">
@@ -346,7 +390,7 @@
     </div>
 </div>
 <!-- Desktop Header Area Start-->
-<div class="VPMDesktopHeader">
+<div class="VPMDesktopHeader hidden-xs hidden-sm">
     <div class="container-fluid header-desktop-bottom">
         <div class="VPMmenu-wrap container no-padding">
 
@@ -356,178 +400,156 @@
             </div>
             <div class="megamenu-collapse collapse navbar-collapse js-navbar-collapse">
                 <ul class="VPMMainMenu nav navbar-nav ">
-                    <li class="has-megamenu">
-                        <a href="#">Feature product</a>
-                        <div class="megamenu">
-                            <div class="container">
-                                <h4>Trending Product<span class="pull-right"><a href="#">View all</a></span></h4>
-                                <ul class="vpm-menu-ul">
-                                    <li>
-                                        <div class="col-sm-6 col-md-4">
-                                            <a href="#" class="thumbnail">
-                                                <img src="http://placehold.it/250x250"/>
-                                            </a>
 
-                                        </div>
-
-                                        <div class="col-sm-6 col-md-2">
-                                            <a href="#" class="thumbnail">
-                                                <img src="http://placehold.it/150x120"/>
-                                            </a>
-                                        </div>
-                                        <div class="col-sm-6 col-md-2">
-                                            <a href="#" class="thumbnail">
-                                                <img src="http://placehold.it/150x120"/>
-                                            </a>
-                                        </div>
-                                        <div class="col-sm-6 col-md-2">
-                                            <a href="#" class="thumbnail">
-                                                <img src="http://placehold.it/150x120"/>
-                                            </a>
-                                        </div>
-                                        <div class="col-sm-6 col-md-2">
-                                            <a href="#" class="thumbnail">
-                                                <img src="http://placehold.it/150x120"/>
-                                            </a>
-                                        </div>
-                                        <div class="col-sm-6 col-md-2">
-                                            <a href="#" class="thumbnail">
-                                                <img src="http://placehold.it/150x120"/>
-                                            </a>
-                                        </div>
-                                        <div class="col-sm-6 col-md-2">
-                                            <a href="#" class="thumbnail">
-                                                <img src="http://placehold.it/150x120"/>
-                                            </a>
-                                        </div>
-                                        <div class="col-sm-6 col-md-2">
-                                            <a href="#" class="thumbnail">
-                                                <img src="http://placehold.it/150x120"/>
-                                            </a>
-                                        </div>
-                                        <div class="col-sm-6 col-md-2">
-                                            <a href="#" class="thumbnail">
-                                                <img src="http://placehold.it/150x120"/>
-                                            </a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </li>
                     <li class="has-megamenu">
-                        <a href="#">VPM Brands</a>
+                        <a href="#">Parts</a>
                         <div class="megamenu">
                             <div class="container">
                                 <div class="col-md-3 megamenu-column">
-                                    <h4>By Type</h4>
+                                    <h4>by Type</h4>
                                     <ul class="vpm-menu-ul">
-                                        <li><a href="#">Home2</a></li>
-                                        <li><a href="#">Page 2</a></li>
-                                        <li><a href="#">Page 3</a></li>
-                                        <li><a href="#">Page 4</a></li>
-                                        <li><a href="#">Page 5</a></li>
-                                        <li><a class="has-image" href="#"><img src="http://placehold.it/200x40"></a></li>
+                                        <li><a href="https://www.vpm.com/oil-cartridges">Oil Cartridges</a></li>
+                                        <li><a href="https://www.vpm.com/oil-cartridge-batteries">Oil Cartridge Batteries</a></li>
+                                        <li><a href="https://www.vpm.com/vaporizer-batteries">All Batteries</a></li>
+                                        <li><a href="https://www.vpm.com/vaporizer-tanks-and-atomizers">Chambers & Atomizers</a></li>
+                                        <li><a href="https://www.vpm.com/vaporizer-mouthpieces">Mouthpieces & Tips</a></li>
+                                        <li><a href="https://www.vpm.com/vaporizer-chargers">Battery Chargers</a></li>
+                                        <li><a href="https://www.vpm.com/vaporizer-accessories">Accessories</a></li>
+                                        <li><a href="https://www.vpm.com/vaporizer-glass-screens-and-filters">Screens & Filters</a></li>
+                                        <li><a href="https://www.vpm.com/vaporizer-mouthpieces">Mouthpieces & Tips</a></li>
+                                        <li><a href="https://www.vpm.com/vaporizer-mouthpieces">Mouthpieces & Tips</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-md-3 megamenu-column">
-                                    <h4>By Use</h4>
+                                    <h4>by Use</h4>
                                     <ul class="vpm-menu-ul">
-                                        <li><a href="#">Page 1</a></li>
-                                        <li><a href="#">Page 2</a></li>
-                                        <li><a href="#">Page 3</a></li>
-                                        <li><a href="#">Page 4</a></li>
-                                        <li><a href="#">Page 5</a></li>
-                                        <li><a class="has-image" href="#"><img src="http://placehold.it/200x40"></a></li>
+                                        <li><a href="https://www.vpm.com/oil-vaporizers/">for Oil</a></li>
+                                        <li><a href="https://www.vpm.com/herbal-vape-parts">for Herbs</a></li>
+                                        <li><a href="https://www.vpm.com/wax-vape-parts/">for Wax</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-md-3 megamenu-column">
-                                    <h4>By Brand</h4>
+                                    <h4>by Brand</h4>
                                     <ul class="vpm-menu-ul">
-                                        <li><a href="#">Page 1</a></li>
-                                        <li><a href="#">Page 2</a></li>
-                                        <li><a href="#">Page 3</a></li>
-                                        <li><a href="#">Page 4</a></li>
-                                        <li><a href="#">Page 5</a></li>
-                                        <li><a class="has-image" href="#"><img src="http://placehold.it/200x40"></a></li>
+                                        <li><a href="https://www.vpm.com/airistech-vapes/">Airistech</a></li>
+                                        <li><a href="https://www.vpm.com/ccell-vapes/">CCell</a></li>
+                                        <li><a href="https://www.vpm.com/dynavap-vape-parts/">DynaVap</a></li>
+                                        <li><a href="https://www.vpm.com/flowermate-vapes/">Flowermate</a></li>
+                                        <li><a href="https://www.vpm.com/jupiter-vapes/">Jupiter</a></li>
+                                        <li><a href="https://www.vpm.com/linx-vape-parts/">Linx</a></li>
+                                        <li><a href="https://www.vpm.com/pckt-vapes/">PCKT</a></li>
+                                        <li><a href="https://www.vpm.com/puffco-vape-parts/">Puffco</a></li>
+                                        <li><a href="https://www.vpm.com/xvape-vapes/">XVape</a></li>
+                                        <li><a href="https://www.vpm.com/yocan-vapes/">Yocan</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-md-3 megamenu-column">
                                     <h4>Feature Brand</h4>
                                     <ul class="vpm-menu-ul">
-                                        <li><a class="has-image" href="#"><img src="http://placehold.it/200x40"></a></li>
-                                        <li><a class="has-image" href="#"><img src="http://placehold.it/200x40"></a></li>
-                                        <li><a class="has-image" href="#"><img src="http://placehold.it/200x40"></a></li>
-                                        <li><a class="has-image" href="#"><img src="http://placehold.it/200x40"></a></li>
-                                        <li><a class="has-image" href="#"><img src="http://placehold.it/200x40"></a></li>
+										<li><a class="thumbnail has-image" href="https://www.vpm.com/elm-and-owl-vapes/"><img width="120" src="https://www.vpm.com/wp-content/themes/vape/images/brands/brands/elmowl-vape.png" alt="Elm Owl logo"></a></li>
+										<li><a class="thumbnail has-image" href="https://www.vpm.com/flowermate-vapes/"><img width="120" src="https://www.vpm.com/wp-content/themes/vape/images/brands/brands/flowermate-vape.png" alt="Flowermate logo"></a></li>
+										<li><a class="thumbnail has-image" href="https://www.vpm.com/jupiter-vapes/"><img width="120" src="https://www.vpm.com/wp-content/themes/vape/images/brands/brands/jupiter-vape.png" alt="Jupiter research-logo"></a></li>
+										<li><a class="thumbnail has-image" href="https://www.vpm.com/ccell-vapes/"><img width="120" src="https://www.vpm.com/wp-content/themes/vape/images/brands/brands/ccell-vape.png" alt="CCell Logo"></a></li>
+										<li><a class="thumbnail has-image" href="https://www.vpm.com/dynavap-vapes/"><img width="120" src="https://www.vpm.com/wp-content/themes/vape/images/brands/brands/dynavap-vape.png" alt="Dynavap logo"></a></li>
+										<li><a class="thumbnail has-image" href="https://www.vpm.com/yocan-vapes/"><img width="120" src="https://www.vpm.com/wp-content/themes/vape/images/brands/brands/yocan-vape.png" alt="Yocan logo"></a></li>
                                     </ul>
                                 </div>
-                                <div class="col-md-12 megamenu-column">
-                                    <h4>Feature Brand</h4>
-                                    <ul class="vpm-menu-ul">
-                                        <li>There is no CSS property background-opacity, but you can fake it by inserting a pseudo element with regular opacity the exact size of the element behind it.</li>
-                                    </ul>
-                                </div>
-                            </div>
+                            </div><!--Container end-->
                         </div>
                     </li>
                     <li class="has-megamenu">
-                        <a href="#">Vape Parts</a>
+                        <a href="#">Vapes</a>
                         <div class="megamenu">
                             <div class="container megamenu-background">
                                 <div class="col-md-3 megamenu-column">
                                     <h4>By Type</h4>
                                     <ul class="vpm-menu-ul">
-                                        <li><a href="#">home3</a></li>
-                                        <li><a href="#">Page 2</a></li>
-                                        <li><a href="#">Page 3</a></li>
-                                        <li><a href="#">Page 4</a></li>
-                                        <li><a href="#">Page 5</a></li>
+                                        <li><a href="https://www.vpm.com/vape-pens/">Vape Pens</a></li>
+                                        <li><a href="https://www.vpm.com/portable-vaporizers/">Portable Vaporizers</a></li>
+                                        <li><a href="https://www.vpm.com/desktop-vaporizers">Desktop Vaporizers</a></li>
+
                                     </ul>
                                 </div>
                                 <div class="col-md-3 megamenu-column">
-                                    <h4>By Use</h4>
+                                    <h4>by Use</h4>
                                     <ul class="vpm-menu-ul">
-                                        <li><a href="#">Page 1</a></li>
-                                        <li><a href="#">Page 2</a></li>
-                                        <li><a href="#">Page 3</a></li>
-                                        <li><a href="#">Page 4</a></li>
-                                        <li><a href="#">Page 5</a></li>
+                                        <li><a href="https://www.vpm.com/oil-vaporizers/">for Oil</a></li>
+                                        <li><a href="https://www.vpm.com/herbal-vape-parts">for Herbs</a></li>
+                                        <li><a href="https://www.vpm.com/wax-vape-parts/">for Wax</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-md-3 megamenu-column">
-                                    <h4>By Brand</h4>
+                                    <h4>by Brand</h4>
                                     <ul class="vpm-menu-ul">
-                                        <li><a href="#">Page 1</a></li>
-                                        <li><a href="#">Page 2</a></li>
-                                        <li><a href="#">Page 3</a></li>
-                                        <li><a href="#">Page 4</a></li>
-                                        <li><a href="#">Page 5</a></li>
+                                        <li><a href="https://www.vpm.com/airistech-vapes/">Airistech</a></li>
+                                        <li><a href="https://www.vpm.com/ccell-vapes/">CCell</a></li>
+                                        <li><a href="https://www.vpm.com/dynavap-vape-parts/">DynaVap</a></li>
+                                        <li><a href="https://www.vpm.com/flowermate-vapes/">Flowermate</a></li>
+                                        <li><a href="https://www.vpm.com/jupiter-vapes/">Jupiter</a></li>
+                                        <li><a href="https://www.vpm.com/linx-vape-parts/">Linx</a></li>
+                                        <li><a href="https://www.vpm.com/pckt-vapes/">PCKT</a></li>
+                                        <li><a href="https://www.vpm.com/puffco-vape-parts/">Puffco</a></li>
+                                        <li><a href="https://www.vpm.com/xvape-vapes/">XVape</a></li>
+                                        <li><a href="https://www.vpm.com/yocan-vapes/">Yocan</a></li>
                                     </ul>
                                 </div>
                                 <div class="col-md-3 megamenu-column">
-                                    <h4>By Brand</h4>
+                                    <h4>Feature Brand</h4>
                                     <ul class="vpm-menu-ul">
-                                        <li><a href="#">Page 1</a></li>
-                                        <li><a href="#">Page 2</a></li>
-                                        <li><a href="#">Page 3</a></li>
-                                        <li><a href="#">Page 4</a></li>
-                                        <li><a href="#">Page 5</a></li>
+                                        <li><a class="thumbnail has-image" href="https://www.vpm.com/elm-and-owl-vapes/"><img width="120" src="https://www.vpm.com/wp-content/themes/vape/images/brands/brands/elmowl-vape.png" alt="Elm Owl logo"></a></li>
+										<li><a class="thumbnail has-image" href="https://www.vpm.com/flowermate-vapes/"><img width="120" src="https://www.vpm.com/wp-content/themes/vape/images/brands/brands/flowermate-vape.png" alt="Flowermate logo"></a></li>
+										<li><a class="thumbnail has-image" href="https://www.vpm.com/jupiter-vapes/"><img width="120" src="https://www.vpm.com/wp-content/themes/vape/images/brands/brands/jupiter-vape.png" alt="Jupiter research-logo"></a></li>
+										<li><a class="thumbnail has-image" href="https://www.vpm.com/ccell-vapes/"><img width="120" src="https://www.vpm.com/wp-content/themes/vape/images/brands/brands/ccell-vape.png" alt="CCell Logo"></a></li>
+										<li><a class="thumbnail has-image" href="https://www.vpm.com/dynavap-vapes/"><img width="120" src="https://www.vpm.com/wp-content/themes/vape/images/brands/brands/dynavap-vape.png" alt="Dynavap logo"></a></li>
+										<li><a class="thumbnail has-image" href="https://www.vpm.com/yocan-vapes/"><img width="120" src="https://www.vpm.com/wp-content/themes/vape/images/brands/brands/yocan-vape.png" alt="Yocan logo"></a></li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
                     </li>
+                    <li class="has-megamenu">
+                        <a href="#">Brands</a>
+                        <div class="megamenu">
+                            <div class="container">
+                                <h4>Feature Brands<span class="pull-right"><a href="/shop/">View all</a></span></h4>
+                                <ul class="vpm-menu-ul">
+                                    <li>
+										<div class="col-sm-4 col-md-4"><a class="thumbnail" href="https://www.vpm.com/ccell-vapes/"><img src="https://www.vpm.com/wp-content/themes/vape/images/brands/brands/ccell-vape.png" alt="CCell Logo"></a></div>
+										<div class="col-sm-4 col-md-2"><a class="thumbnail" href="https://www.vpm.com/elm-and-owl-vapes/"><img src="https://www.vpm.com/wp-content/themes/vape/images/brands/brands/elmowl-vape.png" alt="Elm Owl logo"></a></div>
+										<div class="col-sm-4 col-md-2"><a class="thumbnail" href="https://www.vpm.com/flowermate-vapes/"><img src="https://www.vpm.com/wp-content/themes/vape/images/brands/brands/flowermate-vape.png" alt="Flowermate logo"></a></div>
+										<div class="col-sm-4 col-md-2"><a class="thumbnail" href="https://www.vpm.com/jupiter-vapes/"><img src="https://www.vpm.com/wp-content/themes/vape/images/brands/brands/jupiter-vape.png" alt="Jupiter research-logo"></a></div>
+										<div class="col-sm-4 col-md-2"><a class="thumbnail" href="https://www.vpm.com/pckt-vapes/"><img src="https://www.vpm.com/wp-content/themes/vape/images/brands/brands/pckt-vape.png" alt="PCKT vapor logo"></a></div>
+										<div class="col-sm-4 col-md-2"><a class="thumbnail" href="https://www.vpm.com/dynavap-vapes/"><img src="https://www.vpm.com/wp-content/themes/vape/images/brands/brands/dynavap-vape.png" alt="Dynavap logo"></a></div>
+										<div class="col-sm-4 col-md-2"><a class="thumbnail" href="https://www.vpm.com/yocan-vapes/"><img src="https://www.vpm.com/wp-content/themes/vape/images/brands/brands/yocan-vape.png" alt="Yocan logo"></a></div>
 
+										<div class="col-sm-4 col-md-2"><a class="thumbnail" href="https://www.vpm.com/airistech-vapes/"><img src="https://www.vpm.com/wp-content/themes/vape/images/brands/brands/airistech-vape.png" alt="Airistech logo"></a></div>
+										<div class="col-sm-4 col-md-2"><a class="thumbnail" href="https://www.vpm.com/storz-bickel-vapes/"><img src="https://www.vpm.com/wp-content/themes/vape/images/brands/brands/storz-bickel-vape.png" alt="Storz Bickel logo"></a></div>
+										<div class="col-sm-4 col-md-2"><a class="thumbnail" href="https://www.vpm.com/xvape-vapes/"><img src="https://www.vpm.com/wp-content/themes/vape/images/brands/brands/xvape-vape.png" alt="XVape-logo"></a></div>
+										<div class="col-sm-4 col-md-2"><a class="thumbnail" href="https://www.vpm.com/davinci-vapes/"><img src="https://www.vpm.com/wp-content/themes/vape/images/brands/brands/davinci-vape.png" alt="DaVinci logo"></a></div>
+										<div class="col-sm-4 col-md-2"><a class="thumbnail" href="https://www.vpm.com/puffco-vapes/"><img src="https://www.vpm.com/wp-content/themes/vape/images/brands/brands/puffco-vape.png" alt="Puffco-logo"></a></div>
+										<div class="col-sm-4 col-md-2"><a class="thumbnail" href="https://www.vpm.com/ald-ikrusher-vapes/"><img src="https://www.vpm.com/wp-content/themes/vape/images/brands/brands/ikrusher-vape.png" alt="iKrusher vape logo"></a></div>
+										<div class="col-sm-4 col-md-2"><a class="thumbnail" href="https://www.vpm.com/linx-vape-kits/"><img src="https://www.vpm.com/wp-content/themes/vape/images/brands/brands/linx-vape.png" alt="Linx Logo"></a></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Normal Dropdown <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
+                        <a href="/contact">Contact</a>
+
+                    </li>
+                    <li class="dropdown">
+                        <a href="https://www.vpm.com/our-story/" class="dropdown-toggle" data-toggle="dropdown">Our Story</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="https://www.vpm.com/blog/" class="dropdown-toggle" data-toggle="dropdown">Blog <!--<b class="caret"></b>--></a>
+                      <!--  <ul class="dropdown-menu">
                             <li><a href="#">Action</a></li>
                             <li><a href="#">Another action</a></li>
                             <li><a href="#">Something else here</a></li>
                             <li class="divider"></li>
                             <li><a href="#">Separated link</a></li>
-                        </ul>
+                        </ul>-->
                     </li>
                 </ul>
             </div>
@@ -553,23 +575,162 @@
 </div>
 <!-- Desktop Header Area End-->
 <!-- Mobile Header Area Start-->
-<div class="container row VPMMobileHeader" style="display:none">
-    <div class="header-mobile-top">
-
-    </div>
+<div class="VPMMobileHeader container-mobile visible-xs visible-sm">
     <div class="header-mobile-bottom">
-
-
+		<div class="VPMMobileMenuWrap">
+			<div class="VPMlogo">
+				<span class="main-logo"><img src="https://www.vpm.com/wp-content/themes/vape/images/vpm-logo-350.png"></span>
+				<span class="sticky-logo" style="display:none;"><img src="https://www.vpm.com/wp-content/uploads/2018/07/vape-parts-mart-logo-letters-only.png"></span>
+			</div>
+			
+			<div class="mobile-action-icons pull-right">
+				<div class="main-menu-button-wrapper">
+					<span id="menu-icon-no-scroll-menu" class="toggle menu-icon-pos"><img width="35" src="https://www.vpm.com/wp-content/themes/vape/images/mobile-menuicon/Mobile-Shop-Menu-Icon.png" alt="Menu" class="lazyloading" data-was-processed="true"></span>	
+					<span id="menu-icon-scroll-menu" class="toggle menu-icon-pos" style="display:none"><img width="35" src="https://www.vpm.com/wp-content/themes/vape/images/mobile-menuicon/Mobile-Shop-Menu-Icon-Scroll.png" alt="Menu"></span>	
+				</div>
+				<div class="clearfix"></div>
+				<div id="fly-search">
+					<span id="menu-icon-no-scroll-search" class="fly-search-icon"><img width="40" src="https://www.vpm.com/wp-content/themes/vape/images/mobile-menuicon/Mobile-Search-Icon.png" alt="Search" class="lazyloading" data-was-processed="true"></span>
+					<span id="menu-icon-scroll-search" class="fly-search-icon" style="display:none"><img width="35" src="https://www.vpm.com/wp-content/themes/vape/images/mobile-menuicon/Mobile-Search-Icon-Scroll.png" alt="Search"></span>
+				</div>
+			</div>
+		</div>
     </div>
+	<div class="wrapper cf">
+    <nav id="main-nav" style="display:none!important;">
+        <ul class="first-nav">
+            <li class="search">
+                <div class="form-container">
+                    <form class="search-form" action="https://www.google.com/search" target="_blank" method="get">
+                        <input type="text" name="q" placeholder="Search..." autocomplete="off">
+                    </form>
+                </div>
+            </li>
+        </ul>
+        <ul class="second-nav">
+            <li class="devices">
+                <span>Devices</span>
+                <ul>
+                    <li class="mobile">
+                        <a href="#">Mobile Phones</a>
+                        <ul>
+                            <li><a href="#">Super Smart Phone</a></li>
+                            <li><a href="#">Thin Magic Mobile</a></li>
+                            <li><a href="#">Performance Crusher</a></li>
+                            <li><a href="#">Futuristic Experience</a></li>
+                        </ul>
+                    </li>
+                    <li class="television">
+                        <a href="#">Televisions</a>
+                        <div class="subnav-container">
+                            <ul>
+                                <li><a href="#">Flat Superscreen</a></li>
+                                <li><a href="#">Gigantic LED</a></li>
+                                <li><a href="#">Power Eater</a></li>
+                                <li><a href="#">3D Experience</a></li>
+                                <li><a href="#">Classic Comfort</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="camera">
+                        <a href="#">Cameras</a>
+                        <ul>
+                            <li><a href="#">Smart Shot</a></li>
+                            <li><a href="#">Power Shooter</a></li>
+                            <li><a href="#">Easy Photo Maker</a></li>
+                            <li><a href="#">Super Pixel</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li class="magazines active">
+                <a href="#">Magazines</a>
+                <ul>
+                    <li><a href="#">National Geographic</a></li>
+                    <li><a href="#">Scientific American</a></li>
+                    <li><a href="#">The Spectator</a></li>
+                    <li><a href="#">The Rambler</a></li>
+                    <li><a href="#">Physics World</a></li>
+                    <li><a href="#">Popular Science</a></li>
+                    <li><a href="#">Popular Mechanics</a></li>
+                    <li><a href="#">Sky & Telescope</a></li>
+                    <li><a href="#">Discover</a></li>
+                    <li><a href="#">New Scientist</a></li>
+                    <li><a href="#">Psychology Today</a></li>
+                    <li><a href="#">Wired</a></li>
+                </ul>
+            </li>
+            <li class="store">
+                <a href="#">Store</a>
+                <ul>
+                    <li>
+                        <a href="#">Clothes</a>
+                        <ul>
+                            <li>
+                                <a href="#">Women's Clothing</a>
+                                <ul>
+                                    <li><a href="#">Tops</a></li>
+                                    <li><a href="#">Dresses</a></li>
+                                    <li><a href="#">Trousers</a></li>
+                                    <li><a href="#">Shoes</a></li>
+                                    <li><a href="#">Sale</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#">Men's Clothing</a>
+                                <ul>
+                                    <li><a href="#">Shirts</a></li>
+                                    <li><a href="#">Trousers</a></li>
+                                    <li><a href="#">Shoes</a></li>
+                                    <li><a href="#">Sale</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Jewelry</a></li>
+                    <li><a href="#">Music</a></li>
+                    <li><a href="#">Grocery</a></li>
+                </ul>
+            </li>
+            <li class="collections"><a href="#">Collections</a></li>
+        </ul>
+        <ul class="bottom-nav">
+            <li class="github">
+                <a href="#" target="_blank">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                    </svg>
+                </a>
+            </li>
+            <li class="email">
+                <a href="mailto:hi@vpm.com" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+                        <path d="M0 0h24v24H0z" fill="none" />
+                    </svg>
+                </a>
+            </li>
+            <li class="ko-fi">
+                <a href="#" target="_blank">
+                    <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M23.881 8.948c-.773-4.085-4.859-4.593-4.859-4.593H.723c-.604 0-.679.798-.679.798s-.082 7.324-.022 11.822c.164 2.424 2.586 2.672 2.586 2.672s8.267-.023 11.966-.049c2.438-.426 2.683-2.566 2.658-3.734 4.352.24 7.422-2.831 6.649-6.916zm-11.062 3.511c-1.246 1.453-4.011 3.976-4.011 3.976s-.121.119-.31.023c-.076-.057-.108-.09-.108-.09-.443-.441-3.368-3.049-4.034-3.954-.709-.965-1.041-2.7-.091-3.71.951-1.01 3.005-1.086 4.363.407 0 0 1.565-1.782 3.468-.963 1.904.82 1.832 3.011.723 4.311zm6.173.478c-.928.116-1.682.028-1.682.028V7.284h1.77s1.971.551 1.971 2.638c0 1.913-.985 2.667-2.059 3.015z" />
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
 
 </div>
-<!-- Mobile Header Area End-->
-
-
+<div class="container">
+	<!-- Mobile Header Area End-->
+	
+</div>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="js/jquery-3.4.1.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="js/bootstrap.min.js"></script>
+<script src="js/hc-offcanvas-nav.js"></script>
 <script src="js/ticker.js"></script>
 <script src="js/custom.js"></script>
 </body>
