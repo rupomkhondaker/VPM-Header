@@ -59,7 +59,7 @@ body.hc-nav-open {
     position: fixed;
     top: 0;
     height: 100%;
-    z-index: 9999
+    z-index: 99999;
 }
 
 .hc-offcanvas-nav.is-ios * {
@@ -70,7 +70,7 @@ body.hc-nav-open {
     position: fixed;
     z-index: 9998;
     top: 0;
-    width: 280px;
+    width: 80%;
     height: 100%;
     max-width: 100%;
     max-height: 100%;
@@ -235,8 +235,8 @@ body.hc-nav-open {
 
 .hc-offcanvas-nav.nav-position-left .nav-container {
     left: 0;
-    -webkit-transform: translate3d(-280px, 0, 0);
-    transform: translate3d(-280px, 0, 0)
+    -webkit-transform: translate3d(-80%, 0, 0);
+    transform: translate3d(-80%, 0, 0)
 }
 
 .hc-offcanvas-nav.nav-position-left.nav-levels-overlap li .nav-wrapper {
@@ -251,11 +251,11 @@ body.hc-nav-open {
 
 .hc-offcanvas-nav.nav-position-right .nav-container {
     right: 0;
-    -webkit-transform: translate3d(280px, 0, 0);
-    -o-transform: translate3d(280px, 0, 0);
-    -ms-transform: translate3d(280px, 0, 0);
-    -moz-transform: translate3d(280px, 0, 0);
-    transform: translate3d(280px, 0, 0)
+    -webkit-transform: translate3d(80%, 0, 0);
+    -o-transform: translate3d(80%, 0, 0);
+    -ms-transform: translate3d(80%, 0, 0);
+    -moz-transform: translate3d(80%, 0, 0);
+    transform: translate3d(80%, 0, 0)
 }
 
 .hc-offcanvas-nav.nav-position-right.nav-levels-overlap li .nav-wrapper {
@@ -541,10 +541,12 @@ body.hc-nav-open {
 
 .hc-offcanvas-nav.nav-position-left.nav-open .nav-wrapper {
     box-shadow: 1px 0 2px rgba(0, 0, 0, 0.2)
+	margin-top:32px;
 }
 
 .hc-offcanvas-nav.nav-position-right.nav-open .nav-wrapper {
     box-shadow: -1px 0 2px rgba(0, 0, 0, 0.2)
+	margin-top:32px;
 }
 
 .hc-offcanvas-nav.nav-position-right span.nav-next::before {
@@ -827,7 +829,7 @@ footer .swm:not(:hover) svg .l-3 {
             padding-left: 0px;
         }
 
-        .Ticker {
+        .ticker {
             display: flex;
             text-align: center;
             justify-content: center;
@@ -843,7 +845,9 @@ footer .swm:not(:hover) svg .l-3 {
             margin: 0;
             left: 0;
             right: 0;
-            box-shadow: 0 0 1px 0 #bababa;
+		   -webkit-box-shadow: 0px 2px 1px 0px #f3f3f3;
+			-moz-box-shadow: 0px 2px 1px 0px #f3f3f3;
+			box-shadow: 0px 2px 1px 0px #f3f3f3;
         }
 
         .header-desktop-bottom.fixed-header {
@@ -885,8 +889,8 @@ footer .swm:not(:hover) svg .l-3 {
         }
 
         .header-desktop-top {
-            background: #337ab7;
-            color: #fff;
+			background: #f2f2f2;
+			color: #253849;
         }
 
         .VPMlogo .main-logo img {
@@ -901,12 +905,34 @@ footer .swm:not(:hover) svg .l-3 {
 
         .Search-Cart-Acoount {
             right: 15px;
-            top: 15px;
-            display: flex;
+            display: inline-flex;
             flex-direction: row;
 
         }
-
+		.ql_cart_wrap .ql_cart-btn {
+			top: 12px;
+			box-shadow: none!important;
+		}
+		#ql_woo_cart::after {
+			content: '';
+			position: absolute;
+			top: -15px;
+			right: 7px;
+			margin: 0 auto;
+			width: 0;
+			height: 0;
+			border-bottom: solid 20px #fff;
+			border-left: solid 20px transparent;
+			border-right: solid 20px transparent;
+		}
+		#ql_woo_cart { 
+			border: 1px solid #ddd;
+			box-shadow: none;
+			border-radius: 5px;
+		}
+		#ql_woo_cart ul.product_list_widget li {
+			min-height: 60px;
+		}
         .vpm-field-wrap button {
             border: none;
             background: none;
@@ -916,11 +942,9 @@ footer .swm:not(:hover) svg .l-3 {
             top: 0;
             color: #2964d8;
         }
-
         .header-search-wrap i {
             color: #2964d8;
         }
-
         .vpm-field-wrap .form-control {
             height: 34px;
             font-size: 13px;
@@ -930,14 +954,12 @@ footer .swm:not(:hover) svg .l-3 {
             outline: none;
             font-family: futura-bold;
         }
-
         .search-wrap form div input.form-control {
             box-shadow: none;
             padding: 5px 10px 5px 35px;
             height: 34px;
             border-radius: 50px;
         }
-
         .search-wrap,
         .vpm-cart-wrap,
         .vpm-user-account {
@@ -945,11 +967,9 @@ footer .swm:not(:hover) svg .l-3 {
             margin: 0;
             padding: 0;
         }
-
         .VPMmenu-wrap.container.no-padding {
             display: flex;
         }
-
         .vpm-user-account {
             padding: 13px 13px;
             text-align: center;
@@ -957,11 +977,9 @@ footer .swm:not(:hover) svg .l-3 {
             border-radius: 7px;
             margin: 10px 0px;
         }
-
         .search-wrap {
-            margin: 15px 0 15px 0;
+                margin: 9px 0 0px 0;
         }
-
         .vpm-cart-wrap {
             font-size: 20px;
             margin: 15px 3px;
@@ -969,44 +987,26 @@ footer .swm:not(:hover) svg .l-3 {
             padding: 0px 8px;
             cursor: pointer;
         }
-
-        .vpm-cart-wrap span {
-            position: absolute;
-            top: -8px;
-            left: 15px;
-            right: 0;
-            height: 20px;
-            width: 20px;
-            font-size: 10px;
-            background: green;
-            color: wheat;
-            text-align: center;
-            line-height: 20px;
-            border-radius: 50%;
-        }
-
         .VPMDesktopHeader {
             position: relative;
         }
-
         .VPMMainMenu li {
             position: relative;
         }
-
         .VPMMainMenu .dropdown-menu li a {
             padding: 9px 35px;
         }
-
         .nav > li {
             position: relative;
             display: block;
         }
-
         .nav > li.has-megamenu {
             position: inherit;
             display: block;
         }
-
+		.VPMMainMenu.nav.navbar-nav a {
+			color: #babcbf;
+		}
         .VPMMainMenu li .megamenu {
             position: absolute;
             top: 70%;
@@ -1022,7 +1022,6 @@ footer .swm:not(:hover) svg .l-3 {
             -o-transition: all ease 0.4s;
 
         }
-
         .VPMMainMenu li .megamenu ul h4 {
             font-size: 20px;
             font-weight: 900;
@@ -1030,7 +1029,6 @@ footer .swm:not(:hover) svg .l-3 {
             padding-bottom: 8px;
             color: #253849;
         }
-
         .VPMMainMenu li .megamenu ul li a {
             font-size: 14px;
             color: #222;
@@ -1039,17 +1037,14 @@ footer .swm:not(:hover) svg .l-3 {
             font-weight: 600;
             padding: 5px 10px;
         }
-
         .VPMMainMenu li a {
             padding: 23px 15px;
             font-family: futura-bold;
             font-size: 15px !important;
         }
-
         .VPMMainMenu li:focus {
             background: green;
         }
-
         .VPMMainMenu li:hover .megamenu {
             opacity: 1;
             top: 100%;
@@ -1058,17 +1053,14 @@ footer .swm:not(:hover) svg .l-3 {
             -webkit-transition: all ease 0.4s;
             -o-transition: all ease 0.4s;
         }
-
         .megamenu-collapse {
             width: 100%;
             display: inline-flex !important;
         }
-
         .megamenu ul {
             margin: 2px;
             padding: 5px;
         }
-
         .VPMMainMenu .megamenu ul li {
             position: inherit;
             transition: all ease 0.4s;
@@ -1076,16 +1068,12 @@ footer .swm:not(:hover) svg .l-3 {
             -o-transition: all ease 0.4s;
             margin: 4px 0;
         }
-
-
         .VPMMainMenu .megamenu li:hover {
             background: #253849;
         }
-
         .VPMMainMenu .megamenu li:hover a {
             color: #fff;
         }
-
         .VPMMainMenu li .megamenu ul li a.has-image {
             font-size: 14px;
             color: #222;
@@ -1093,7 +1081,29 @@ footer .swm:not(:hover) svg .l-3 {
             display: block;
             padding: 0;
         }
-
+		
+		.secure-onepage-checkout {
+			float: right;
+			padding: 13px 26px;
+		}
+		.Search-Cart-Acoount-checkout {
+			right: 15px;
+			display: inline-flex;
+			flex-direction: column;
+			width: 100%;
+			float: right!important;
+		}
+		@media (min-width: 768px) and (max-width: 1024px) {
+		  .hidden-cs-sm {
+			display: none !important;
+		  }
+		}
+		
+		@media (max-width: 1024px) and (min-width: 768px) {
+		  .visible-cs-sm {
+			  display: block!important;
+		  }
+		}
         @media (min-width: 992px) and (max-width: 1199px)  {
             .VPMMainMenu li a {
                 padding: 23px 10px;
@@ -1107,17 +1117,36 @@ footer .swm:not(:hover) svg .l-3 {
                 top: 3px;
             }
         }
+		@media (min-width: 1025px) {
+			span.cart-header {
+				background-image: url(https://www.vpm.com/wp-content/uploads/2019/04/Mobile-Cart-Icon-Scroll.png);
+				padding: 17px 20px;
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: cover;
+				margin: 6px;
+			}
+		}
         @media (max-width: 1024px){ 
+			.mobile_menu_cart_wrap .ql_cart_wrap button .count {
+				display: block;
+				top: -27px;
+				background: #2D56c6;
+				right: 0px;
+				position: relative;
+			}
+			.content_background {
+				margin-top: 1px;
+			}
 			.container-mobile {
 				width: 100%;
 				box-shadow: 0 0 1px 0 #bababa;
-				
 			}
 			.header-mobile-bottom.fixed-header{
 				box-shadow: 0 0 1px 0 #bababa;
 				z-index: 1;
 				background: #fff;
-				top: 40px;
+				top: 0px;
 			}
 			.VPMMobileMenuWrap {
 				min-height: 65px;
@@ -1130,30 +1159,36 @@ footer .swm:not(:hover) svg .l-3 {
 				position: absolute;
 				right: 0;
 				display: inline-flex;
-				min-width: 200px;
+				min-width: 145px;
 				text-align: center;
+                  width: 100%;
 			}
 			.main-menu-button-wrapper {
 				padding: 5px 15px;
+                position: absolute;
+    			right: 90px;
 			}
 			
 			#fly-search {
 				width: 100%;
 				position: absolute;
-				padding: 5px 15px;
+				padding: 5px 0;
 			}
 			
 			.fly-search-icon{
 				position: absolute;
 				right: 56px;
-				width: 27px;
+				width: 31px;
 				top: 9px;
+			}
+			.header-mobile-bottom.fixed-header .fly-search-icon {
+				top: 3px;
 			}
 			span.fly-search-cancel {
 				position: absolute;
 				z-index: 99999999;
-				top: 8px;
-				left: 12px;
+				top: 14px;
+    			left: 15px;
 				font-size: 26px;
 				color: #acabab;
 			}
@@ -1164,7 +1199,6 @@ footer .swm:not(:hover) svg .l-3 {
 				top: 18px;
 				font-size: 19px;
 				color: #2D56C6;
-
 			}
 			
 			.fly-search-item {
@@ -1189,6 +1223,23 @@ footer .swm:not(:hover) svg .l-3 {
 				height: 54px;
 				margin-top: -1px!important;
 			}
+			.mobile_menu_cart_wrap {
+				float: right;
+				right: 6px;
+				padding: 7px;
+				display: flex;
+				position: absolute;
+				background-image: url(https://www.vpm.com/wp-content/uploads/2019/04/Mobile-Cart-Icon.png);
+				background-repeat: no-repeat;
+				background-position: center center;
+				background-size: cover;
+				top: 6px;
+                 
+			}
+			.header-mobile-bottom.fixed-header .mobile_menu_cart_wrap {
+				background-image: url(https://www.vpm.com/wp-content/uploads/2019/04/Mobile-Cart-Icon-Scroll.png);
+				padding: 12px;
+			}
         }
 		@media (max-width: 767px){
 			.VPMlogo {
@@ -1201,7 +1252,7 @@ footer .swm:not(:hover) svg .l-3 {
 			}
 			.mobile-action-icons {
 				min-width: 160px;
-                justify-content: flex-end;
+				justify-content: start;
 			}
 		}
         @media (max-width: 380px){
@@ -1216,6 +1267,7 @@ footer .swm:not(:hover) svg .l-3 {
             }
         }
 
+
 /*---------------------------------------------*/
 </style>
 </head>
@@ -1229,29 +1281,26 @@ footer .swm:not(:hover) svg .l-3 {
 <div class="container-fluid header-desktop-top">
     <div class="row">
         <div class="container">
-            <div id="VPMTicker" class="VPMTicker" style="display:none;">
-                <ul class="Ticker">
-                    <li>ALL U.S. ORDERS SHIP FOR $4.95</li>
-                    <li>Tip of the week: Keep the dream alive, hit snooze.</li>
-                </ul>
-                <ul class="vpm-menu-ul"></ul>
-            </div>
+			<?php if(!is_checkout() && !is_wc_endpoint_url( 'order-received' ) && $vpm_offer_active){ ?>
+				  <?php echo do_shortcode('[vpmoffer]'); ?>
+				  <div class="clearfix"></div>
+			<?php } ?>
         </div>
         <div class="clearfix"></div>
     </div>
 </div>
 <!-- Desktop Header Area Start-->
-<header id="header" class="VPMDesktopHeader hidden-xs hidden-sm">
+<header id="header" class="VPMDesktopHeader hidden-xs hidden-cs-sm">
     <div class="container-fluid header-desktop-bottom">
         <div class="VPMmenu-wrap container no-padding">
-
             <div class="VPMlogo">
                 <span class="main-logo"><img src="https://www.vpm.com/wp-content/themes/vape/images/vpm-logo-350.png"></span>
                 <span class="sticky-logo" style="display:none;"><img src="https://www.vpm.com/wp-content/uploads/2018/07/vape-parts-mart-logo-letters-only.png"></span>
             </div>
+			
+			<?php if(!is_checkout()  && !is_wc_endpoint_url( 'order-received' )){?>
             <div class="megamenu-collapse collapse navbar-collapse js-navbar-collapse">
                 <ul class="VPMMainMenu nav navbar-nav ">
-
                     <li class="has-megamenu">
                         <a href="#">Parts</a>
                         <div class="megamenu">
@@ -1372,7 +1421,6 @@ footer .swm:not(:hover) svg .l-3 {
 										<div class="col-sm-4 col-md-2"><a class="thumbnail" href="https://www.vpm.com/pckt-vapes/"><img src="https://www.vpm.com/wp-content/themes/vape/images/brands/brands/pckt-vape.png" alt="PCKT vapor logo"></a></div>
 										<div class="col-sm-4 col-md-2"><a class="thumbnail" href="https://www.vpm.com/dynavap-vapes/"><img src="https://www.vpm.com/wp-content/themes/vape/images/brands/brands/dynavap-vape.png" alt="Dynavap logo"></a></div>
 										<div class="col-sm-4 col-md-2"><a class="thumbnail" href="https://www.vpm.com/yocan-vapes/"><img src="https://www.vpm.com/wp-content/themes/vape/images/brands/brands/yocan-vape.png" alt="Yocan logo"></a></div>
-
 										<div class="col-sm-4 col-md-2"><a class="thumbnail" href="https://www.vpm.com/airistech-vapes/"><img src="https://www.vpm.com/wp-content/themes/vape/images/brands/brands/airistech-vape.png" alt="Airistech logo"></a></div>
 										<div class="col-sm-4 col-md-2"><a class="thumbnail" href="https://www.vpm.com/storz-bickel-vapes/"><img src="https://www.vpm.com/wp-content/themes/vape/images/brands/brands/storz-bickel-vape.png" alt="Storz Bickel logo"></a></div>
 										<div class="col-sm-4 col-md-2"><a class="thumbnail" href="https://www.vpm.com/xvape-vapes/"><img src="https://www.vpm.com/wp-content/themes/vape/images/brands/brands/xvape-vape.png" alt="XVape-logo"></a></div>
@@ -1403,58 +1451,59 @@ footer .swm:not(:hover) svg .l-3 {
                     </li>
                 </ul>
             </div>
-			<div class="Search-Cart-Acoount pull-right">
-			<div class="login_cart_wrap">
-								<div class="ql_cart_wrap">
-									<button href="<?php echo esc_url( wc_get_cart_url() ); ?>" class="ql_cart-btn">
-										<?php //echo wp_kses_post( WC()->cart->get_cart_total() ); ?>
-										<span class="count"><?php echo esc_html( WC()->cart->cart_contents_count );?></span>
-										<i class="cart-header"></i><i class="ql-chevron-down"></i>
-									</button>
-									<div id="ql_woo_cart">
-										<?php global $woocommerce; ?>
-										<?php the_widget('WC_Widget_Cart');  ?>
-									</div><!-- /ql_woo_cart --> 
-								</div>
-									<div class="login_btn_wrap search_wrap">
-										<div class="header-search-wrap">
-											<div class="search-wrap"> 
-												<form method="get" id="header-inline-search" role="search" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-													<div class="vpm-field-wrap">
-														<input type="hidden" name="post_type" value="product" />
-														<input id="live_product_search" onkeyup="product_live_data_fetch()" type="text" class="form-control" name="s" placeholder="Search store..." autocomplete="off" required>
-														<button type="submit"><i class="fa fa-search fa-fw"></i></button>
-													</div>
-												</form>
-											</div> 
-											<div id="live_datafetch"></div>
-										</div>
+			<div class="Search-Cart-Acoount pull-right login_cart_wrap">
+
+				<div class="login_btn_wrap search_wrap">
+						<div class="header-search-wrap">
+							<div class="search-wrap"> 
+								<form method="get" id="header-inline-search" role="search" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+									<div class="vpm-field-wrap">
+										<input type="hidden" name="post_type" value="product" />
+										<input id="live_product_search" onkeyup="product_live_data_fetch()" type="text" class="form-control" name="s" placeholder="Search store..." autocomplete="off" required>
+										<button type="submit"><i class="fa fa-search fa-fw"></i></button>
 									</div>
-								<div class="clearfix"></div>
-				</div><!-- col-md-4 -->
-		
+								</form>
+							</div> 
+							<div id="live_datafetch"></div>
+						</div>
+					</div>
+				<div class="ql_cart_wrap">
+					<button href="<?php echo esc_url( wc_get_cart_url() ); ?>" class="ql_cart-btn">
+						<?php //echo wp_kses_post( WC()->cart->get_cart_total() ); ?>
+						<span class="count"><?php echo esc_html( WC()->cart->cart_contents_count );?></span>
+						<i class="cart-header"></i><i class="ql-chevron-down"></i>
+					</button>
+					<div id="ql_woo_cart">
+						<?php global $woocommerce; ?>
+						<?php the_widget('WC_Widget_Cart');  ?>
+					</div><!-- /ql_woo_cart --> 
+				</div>
+				<div class="clearfix"></div>
             </div>
-        </div>
+			<?php }else{ 
+				echo'<div class="Search-Cart-Acoount-checkout pull-right login_cart_wrap">';
+				echo'<div class="secure-onepage-checkout"><span class="checkout-top-icon"><img width="26" src="'. get_stylesheet_directory_uri().'/images/media/checkout-page/vpm-black-check.svg"></span><span class="secure-onepage-checkout-title">SECURE ONE PAGE CHECKOUT</span></div>';
+				echo'</div>';
+			}
+			?>
+	   </div>
     </div>
     <div class="clearfix"></div>
 </header>
 <!-- Desktop Header Area End-->
 <!-- Mobile Header Area Start-->
-<header id="mobile-header" class="VPMMobileHeader container-mobile visible-xs visible-sm">
+<header id="mobile-header" class="VPMMobileHeader container-mobile visible-xs visible-cs-sm">
     <div class="header-mobile-bottom">
 		<div class="VPMMobileMenuWrap">
 			<div class="VPMlogo">
 				<span class="main-logo"><img src="https://www.vpm.com/wp-content/themes/vape/images/vpm-logo-350.png"></span>
 				<span class="sticky-logo" style="display:none;"><img src="https://www.vpm.com/wp-content/uploads/2018/07/vape-parts-mart-logo-letters-only.png"></span>
 			</div>
-			
 			<div class="mobile-action-icons pull-right">
-				<div class="main-menu-button-wrapper">
-					<span id="menu-icon-no-scroll-menu" class="toggle menu-icon-pos"><img width="35" src="https://www.vpm.com/wp-content/themes/vape/images/mobile-menuicon/Mobile-Shop-Menu-Icon.png" alt="Menu" class="lazyloading" data-was-processed="true"></span>	
-					<span id="menu-icon-scroll-menu" class="toggle menu-icon-pos" style="display:none"><img width="35" src="https://www.vpm.com/wp-content/themes/vape/images/mobile-menuicon/Mobile-Shop-Menu-Icon-Scroll.png" alt="Menu"></span>	
-				</div>
-	
-				
+			<div class="main-menu-button-wrapper">
+				<span id="menu-icon-no-scroll-menu" class="toggle menu-icon-pos"><img width="35" src="https://www.vpm.com/wp-content/themes/vape/images/mobile-menuicon/Mobile-Shop-Menu-Icon.png" alt="Menu" class="lazyloading" data-was-processed="true"></span>	
+				<span id="menu-icon-scroll-menu" class="toggle menu-icon-pos" style="display:none"><img width="35" src="https://www.vpm.com/wp-content/themes/vape/images/mobile-menuicon/Mobile-Shop-Menu-Icon-Scroll.png" alt="Menu"></span>	
+			</div>
 			<div id="fly-search" >
 				<form id="fly-search-form" style="display:none" method="get" id="header-searchform" role="search" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 					<div class="fly-search-item">
@@ -1483,6 +1532,7 @@ footer .swm:not(:hover) svg .l-3 {
 			</div>
 		  </div>
 		</div>
+		 <div class="clearfix"></div>
     </div>
 	
 	
@@ -1491,9 +1541,13 @@ footer .swm:not(:hover) svg .l-3 {
         <ul class="first-nav">
             <li class="search">
                 <div class="form-container">
-                    <form class="search-form" action="https://www.google.com/search" target="_blank" method="get">
-                        <input type="text" name="q" placeholder="Search..." autocomplete="off">
-                    </form>
+					<form method="get" id="header-inline-search" role="search" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+						<div class="vpm-field-wrap">
+							<input type="hidden" name="post_type" value="product" />
+							<input id="live_product_search" onkeyup="product_live_data_fetch()" type="text" class="form-control" name="s" placeholder="Search store..." autocomplete="off" required>
+							<button type="submit"><i class="fa fa-search fa-fw"></i></button>
+						</div>
+					</form>
                 </div>
             </li>
         </ul>
